@@ -64,7 +64,7 @@ export function GuestSpeakers() {
       name: "Niyi Adesanya",
       title: "Leadership & Development Expert",
       expertise: "Leadership, Personal Development",
-      image: "/niyi-adesanya-1.jpeg",
+      image: "/niyi-adesanya.jpg",
       description: "Dynamic leadership expert and personal development coach with extensive experience in transforming individuals and organizations.",
       highlight: "Leadership Expert",
     },

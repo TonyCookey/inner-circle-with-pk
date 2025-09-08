@@ -70,8 +70,8 @@ export function MainMentor() {
           {/* Image section with ultra-modern design */}
           <div className="relative group">
             {/* Floating background elements */}
-            <div className="absolute -inset-8 bg-gradient-to-r from-yellow-500/20 via-yellow-600/10 to-yellow-500/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
-            <div className="absolute -inset-4 bg-gradient-to-br from-yellow-500/30 to-transparent rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-700"></div>
+            <div className="absolute -inset-8 bg-gradient-to-r from-yellow-500/10 via-yellow-600/10 to-yellow-500/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity duration-700"></div>
+            <div className="absolute -inset-4 bg-gradient-to-br from-yellow-500/10 to-transparent rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-700"></div>
 
             {/* Main image container */}
             <div className="relative glass-ultra rounded-3xl p-2 group-hover:scale-105 transition-all duration-700">
