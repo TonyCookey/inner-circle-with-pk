@@ -79,7 +79,7 @@ export function MainMentor() {
                 <img
                   src="/PK-on-suit.jpg"
                   alt="Pastor Kingsley Okonkwo"
-                  className="w-full h-[700px] object-cover object-center group-hover:scale-110 transition-transform duration-1000"
+                  className="w-full h-[400px] md:h-[600px] object-cover object-center group-hover:scale-110 transition-transform duration-1000"
                 />
 
                 {/* Gradient overlay */}
@@ -112,7 +112,7 @@ export function MainMentor() {
           {/* Content section */}
           <div className="space-y-10">
             {/* Title and description */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-3">
               <div className="space-y-2">
                 <h3 className="text-2xl md:text-2xl font-black text-gradient-premium tracking-wide">Founder & Lead Mentor</h3>
                 {/* <p className="text-xl text-yellow-500 font-bold">Founder & Lead Mentor</p> */}

@@ -7,10 +7,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 group mb-4">
-              <div className="relative">
+              {/* <div className="relative">
                 <Crown className="h-10 w-10 text-yellow-500 group-hover:scale-110 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-yellow-500/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
+              </div> */}
               <div>
                 <span className="text-2xl font-black text-white">Inner Circle</span>
                 <div className="text-xs text-yellow-500 font-medium tracking-wider">WITH PK</div>

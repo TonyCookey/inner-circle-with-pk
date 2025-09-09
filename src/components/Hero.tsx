@@ -41,21 +41,22 @@ export function Hero({ onSelectTier }: HeroProps) {
         </div>
 
         {/* Main headline */}
-        <div className="mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+        <div className="mb-8 mt-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
           <h1 className="text-6xl md:text-8xl font-black mb-4 leading-tight">
             <span className="text-gradient">Inner Circle</span>
             <br />
-            <span className="text-yellow-600 flex items-center justify-center md:justify-end gap-4">
-              <Crown className="h-16 w-16 md:h-20 md:w-20 text-yellow-600" />
+            <span className="text-yellow-600 flex items-center justify-center md:justify-end md:gap-20 text-center">
+              {/* <Crown className="h-16 w-16 md:h-20 md:w-20 text-yellow-600" /> */}
               with PK
+              <span></span>
             </span>
           </h1>
         </div>
 
         {/* Subtitle */}
-        <p className="hidden md:block md:text-xl text-gray-300 mb-6 max-w-4xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: "0.4s" }}>
-          Join an <span className="text-yellow-500 font-semibold">exclusive brotherhood</span> of ambitious men committed to excellence. Access world-class
-          mentoring, proven strategies, and a network that elevates your success to unprecedented heights.
+        <p className="md:block md:text-xl mb-6 max-w-4xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: "0.4s" }}>
+          Join an <span className="text-yellow-500 font-semibold">exclusive and private group coaching</span> of ambitious men committed to excellence. Access
+          world-class mentoring, proven strategies, and a network that elevates your success to unprecedented heights.
         </p>
 
         {/* Value propositions */}
