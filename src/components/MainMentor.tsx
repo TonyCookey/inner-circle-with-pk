@@ -29,7 +29,7 @@ export function MainMentor() {
   ];
 
   return (
-    <section id="about pk" className="relative py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="meet-pk" className="relative py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Ultra-modern background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-black"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(245,158,11,0.1)_0%,transparent_50%)] opacity-60"></div>
@@ -120,7 +120,7 @@ export function MainMentor() {
 
               <div className="space-y-6 text-gray-300 leading-relaxed text-md">
                 <p className="text-md leading-relaxed">
-                  Pastor Kingsley is a <span className="text-yellow-500 font-semibold">visionary leader</span> and transformational mentor who has dedicated his
+                  Dr. Kingsley is a <span className="text-yellow-500 font-semibold">visionary leader</span> and transformational mentor who has dedicated his
                   life to developing exceptional leaders and building thriving communities across the globe.
                 </p>
                 <p>
@@ -167,7 +167,7 @@ export function MainMentor() {
                       " My mission is to raise a generation of leaders who will impact their communities, industries, and nations with excellence, integrity,
                       and purpose. "
                     </blockquote>
-                    <cite className="text-yellow-500 font-bold text-md">- Pastor Kingsley Okonkwo</cite>
+                    <cite className="text-yellow-500 font-bold text-md">- Dr. Kingsley Okonkwo</cite>
                   </div>
                 </div>
               </div>

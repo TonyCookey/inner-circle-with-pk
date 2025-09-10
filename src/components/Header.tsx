@@ -32,10 +32,10 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {["About PK", "Mentors", "Pricing", "FAQs"].map((item) => (
+            {["About", "Meet PK", "Mentors", "Pricing", "FAQs"].map((item) => (
               <a
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                href={`#${item.toLowerCase().replace(" ", "-")}`}
                 className="relative text-gray-300 hover:text-yellow-500 transition-colors duration-300 font-medium group"
               >
                 {item}

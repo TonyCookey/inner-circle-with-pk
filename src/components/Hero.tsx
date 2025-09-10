@@ -55,7 +55,7 @@ export function Hero({ onSelectTier }: HeroProps) {
 
         {/* Subtitle */}
         <p className="md:block md:text-xl mb-6 max-w-4xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: "0.4s" }}>
-          Join an <span className="text-yellow-500 font-semibold">exclusive and private group coaching</span> of ambitious men committed to excellence. Access
+          Join an <span className="text-yellow-500 font-semibold">exclusive and private group coaching</span> for ambitious men committed to excellence. Access
           world-class mentoring, proven strategies, and a network that elevates your success to unprecedented heights.
         </p>
 
@@ -73,7 +73,7 @@ export function Hero({ onSelectTier }: HeroProps) {
           </div>
           <div className="glass p-4 rounded-2xl">
             <Sparkles className="h-8 w-8 text-yellow-500 mx-auto mb-3" />
-            <h3 className="font-semibold text-white mb-2">Proven Results</h3>
+            <h3 className="font-semibold text-white mb-2">Exponential Growth</h3>
             <p className="text-sm text-gray-400">Transform your success trajectory</p>
           </div>
         </div>

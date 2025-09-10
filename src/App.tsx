@@ -5,7 +5,6 @@ import { About } from "./components/About";
 import { MainMentor } from "./components/MainMentor";
 import { GuestSpeakers } from "./components/GuestSpeakers";
 import { Pricing } from "./components/Pricing";
-import { PricingOld } from "./components/PricingOld";
 import { Benefits } from "./components/Benefits";
 import { Registration } from "./components/Registration";
 import { FAQ } from "./components/FAQ";

@@ -157,7 +157,7 @@ export function GuestSpeakers() {
                   {/* Name and title overlay */}
                   <div className="absolute bottom-6 left-6 right-6">
                     <h3 className="text-xl font-black text-white mb-1 group-hover:text-yellow-500 transition-colors duration-300">{speaker.name}</h3>
-                    <p className="text-yellow-300 font-bold text-sm tracking-wide">{speaker.title}</p>
+                    <p className="text-yellow-500 font-bold text-sm tracking-wide">{speaker.title}</p>
                   </div>
                 </div>
 
