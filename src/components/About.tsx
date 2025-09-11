@@ -5,9 +5,10 @@ export function About() {
     {
       icon: Crown,
       title: "Elite Membership",
-      description: "Exclusive access to a carefully curated community of high-achievers and industry leaders",
+      description: "Exclusive access to a community of high-achievers and industry leaders",
       color: "from-blue-500/20 to-blue-600/10",
       borderColor: "border-blue-500/30",
+      backgroundImage: "/crowd-mono.jpg",
     },
     {
       icon: Users,
@@ -15,13 +16,15 @@ export function About() {
       description: "Direct guidance from Dr. Kingsley Okonkwo and world-class guest speakers",
       color: "from-purple-500/20 to-purple-600/10",
       borderColor: "border-purple-500/30",
+      backgroundImage: "/pk-sitting-on-couch-1.jpg",
     },
     {
       icon: Rocket,
       title: "Exponential Growth",
-      description: "Accelerate your personal and professional development through proven frameworks and mentorship",
+      description: "Accelerate your personal and professional development through mentorship",
       color: "from-yellow-500/20 to-yellow-600/10",
       borderColor: "border-yellow-500/30",
+      backgroundImage: "/pk-preaching-mono.jpg",
     },
   ];
 
@@ -101,7 +104,7 @@ export function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="hidden grid grid-cols-1 md:grid-cols-3 gap-8">
             {pillars.map((pillar, index) => (
               <div key={index} className="group relative" style={{ animationDelay: `${index * 0.2}s` }}>
                 {/* Background glow */}
@@ -126,7 +129,47 @@ export function About() {
               </div>
             ))}
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pillars.map((pillar, index) => (
+              <div key={index} className="group relative" style={{ animationDelay: `${index * 0.2}s` }}>
+                {/* Background glow */}
+                <div
+                  className={`absolute -inset-4 bg-gradient-to-br ${pillar.color} rounded-3xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-500`}
+                ></div>
+
+                {/* Main card */}
+                <div
+                  className={`relative glass-ultra rounded-3xl overflow-hidden border ${pillar.borderColor} group-hover:scale-105 transition-all duration-500 h-full text-center`}
+                >
+                  {/* Background image */}
+                  <div className="absolute inset-0">
+                    <img
+                      src={pillar.backgroundImage}
+                      alt={pillar.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    {/* Dark overlay for text readability */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20"></div>
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>
+                  </div>
+
+                  {/* Content overlay */}
+                  <div className="relative z-10 p-8 h-200 flex flex-col justify-end">
+                    {/* Icon with glow effect */}
+                    {/* <div className="relative inline-block mb-6">
+                      <pillar.icon className="h-16 w-16 text-yellow-500 mx-auto group-hover:scale-110 transition-transform duration-300" />
+                      <div className="absolute inset-0 bg-yellow-500/30 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div> */}
+
+                    <p className="text-2xl font-black text-yellow-600 mb-4 group-hover:text-yellow-500 transition-colors duration-300">{pillar.title}</p>
+                    <p className="text-gray-300 leading-relaxed text-md">{pillar.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+        {/* Call to Action */}
         <div className="mt-20 flex justify-center align-center">
           <a href="https://mainstack.store/ldmproducts/pks-inner-circle" className="btn-ultra group px-20 py-5 flex items-center justify-center space-x-2">
             <span> Register Now</span>

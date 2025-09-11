@@ -1,33 +1,6 @@
-import { Award, BookOpen, Users, Target, Quote, Sparkles } from "lucide-react";
+import { Quote, Sparkles } from "lucide-react";
 
 export function MainMentor() {
-  const achievements = [
-    {
-      icon: Award,
-      title: "Visionary Leadership",
-      description: "Transformational leader with decades of proven impact",
-      metric: "20+ Years",
-    },
-    {
-      icon: BookOpen,
-      title: "Author & Speaker",
-      description: "International bestselling author and keynote speaker",
-      metric: "5+ Books",
-    },
-    {
-      icon: Users,
-      title: "Community Impact",
-      description: "Built thriving communities across multiple continents",
-      metric: "100K+ Lives",
-    },
-    {
-      icon: Target,
-      title: "Strategic Excellence",
-      description: "Proven track record in organizational transformation",
-      metric: "50+ Organizations",
-    },
-  ];
-
   return (
     <section id="meet-pk" className="relative py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Ultra-modern background */}
@@ -70,11 +43,11 @@ export function MainMentor() {
           {/* Image section with ultra-modern design */}
           <div className="relative group">
             {/* Floating background elements */}
-            <div className="absolute -inset-8 bg-gradient-to-r from-yellow-500/10 via-yellow-600/10 to-yellow-500/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity duration-700"></div>
-            <div className="absolute -inset-4 bg-gradient-to-br from-yellow-500/10 to-transparent rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-700"></div>
+            <div className="absolute -inset-8 bg-gradient-to-r from-yellow-500/10 via-yellow-400/10 to-yellow-500/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity duration-700"></div>
+            {/* <div className="absolute -inset-4 bg-gradient-to-br from-yellow-500/30 to-transparent rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-700"></div> */}
 
             {/* Main image container */}
-            <div className="relative glass-ultra rounded-3xl p-2 group-hover:scale-105 transition-all duration-700">
+            <div className="relative glass-ultra rounded-3xl  group-hover:scale-105 transition-all duration-700">
               <div className="relative overflow-hidden rounded-2xl">
                 <img
                   src="/PK-on-suit.jpg"
@@ -132,26 +105,6 @@ export function MainMentor() {
                   leadership principles to create a comprehensive mentoring experience that transforms both personal and professional lives.
                 </p>
               </div>
-            </div>
-
-            {/* Achievement cards */}
-            <div className="hidden grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {achievements.map((achievement, index) => (
-                <div key={index} className="group card-ultra p-8 hover:scale-105 transition-all duration-500" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <div className="flex items-start space-x-4">
-                    <div className="glass-ultra p-4 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                      <achievement.icon className="h-8 w-8 text-yellow-500" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-bold text-white text-lg">{achievement.title}</h4>
-                        <span className="text-yellow-500 font-bold text-sm">{achievement.metric}</span>
-                      </div>
-                      <p className="text-gray-300 text-sm leading-relaxed">{achievement.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
             </div>
 
             {/* Mission statement */}

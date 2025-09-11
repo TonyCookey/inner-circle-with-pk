@@ -25,7 +25,7 @@ export function GuestSpeakers() {
       expertise: "Innovation, Technology, Strategy",
       image: "/olumide-emmanuel.jpg",
       description:
-        "A visionary leader in technology and innovation, Dr. Emmanuel brings cutting-edge insights on digital transformation and strategic innovation.",
+        "A visionary leader in Real estate and innovation, Dr. Emmanuel brings cutting-edge insights on mental transformation and strategic innovation.",
       highlight: "Tech Visionary",
     },
     {
@@ -57,7 +57,7 @@ export function GuestSpeakers() {
       title: "Marriage Coach & Relationship Expert",
       expertise: "Leadership, Personal Development",
       image: "/mildred-kingsley-okonkwo.jpg",
-      description: "Dynamic leadership expert and personal development coach with extensive experience in transforming individuals and organizations.",
+      description: "Dynamic Relationship expert and personal development coach with extensive experience in transforming individuals and marraiges.",
       highlight: "Transformation Catalyst",
     },
     {
@@ -85,7 +85,7 @@ export function GuestSpeakers() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(59,130,246,0.05)_0%,transparent_60%)]"></div>
 
       {/* Floating geometric elements */}
-      <div className="absolute top-32 left-16 w-80 h-80 bg-gradient-to-br from-yellow-500/15 to-transparent rounded-full blur-3xl animate-float"></div>
+      <div className="absolute top-32 left-16 w-300 h-300 bg-gradient-to-br from-yellow-500/15 to-transparent rounded-full blur-3xl animate-float"></div>
       <div
         className="absolute bottom-32 right-16 w-96 h-96 bg-gradient-to-tl from-blue-500/10 to-transparent rounded-full blur-3xl animate-float"
         style={{ animationDelay: "4s" }}
@@ -151,8 +151,7 @@ export function GuestSpeakers() {
                   <img src={speaker.image} alt={speaker.name} className="w-full h-100 object-cover group-hover:scale-110 transition-transform duration-700" />
 
                   {/* Modern gradient overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
 
                   {/* Name and title overlay */}
                   <div className="absolute bottom-6 left-6 right-6">
