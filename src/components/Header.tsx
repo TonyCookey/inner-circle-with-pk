@@ -14,7 +14,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-0 w-full z-50 ${scrolled ? "glass-dark shadow-soft" : "bg-transparent"}`}>
+    <header className={`fixed top-0 w-full z-50 ${scrolled ? "glass-dark shadow-soft" : "bg-transparent"}`} role="banner">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6 px-2">
           <a href="#">
@@ -31,7 +31,7 @@ export function Header() {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8" aria-label="Primary Navigation" role="navigation">
             {["About", "Meet PK", "Mentors", "Pricing", "FAQs"].map((item) => (
               <a
                 key={item}
@@ -48,7 +48,11 @@ export function Header() {
           </nav>
 
           {/* Mobile menu button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden glass p-3 rounded-xl text-gray-300 hover:text-white transition-colors">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden glass p-3 rounded-xl text-gray-300 hover:text-white transition-colors"
+            aria-label="Toggle Mobile Menu"
+          >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
@@ -56,7 +60,7 @@ export function Header() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden pb-6 border-t border-gray-800/50 mt-4 pt-6">
-            <nav className="flex flex-col space-y-4">
+            <nav className="flex flex-col space-y-4" aria-label="Mobile Primary Navigation" role="navigation">
               {["About PK", "Mentors", "Pricing", "FAQs"].map((item) => (
                 <a
                   key={item}

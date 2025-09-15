@@ -7,7 +7,7 @@ interface HeroProps {
 
 export function Hero({ onSelectTier }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <main className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden" role="main" aria-labelledby="hero-heading">
       {/* Hero background image */}
       <div className="absolute inset-0">
         <img src="/pk-preaching-bg.jpg" alt="PK Teaching Crowd" className="w-full h-full object-cover object-right" />
@@ -84,6 +84,7 @@ export function Hero({ onSelectTier }: HeroProps) {
           <a
             href="https://mainstack.store/ldmproducts/pks-inner-circle"
             className="w-200 btn-ultra group px-10 py-5 flex items-center justify-center space-x-2"
+            aria-label="Join the Inner Circle - Annual membership"
           >
             <span>Join the Circle</span>
             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -91,6 +92,7 @@ export function Hero({ onSelectTier }: HeroProps) {
           <a
             href="#pricing"
             className="btn-secondary text-white px-10 py-5 rounded-2xl font-semibold text-lg hover:text-yellow-500 transition-colors shadow-soft"
+            aria-label="See Pricing for Inner Circle"
           >
             See Pricing
           </a>
@@ -114,6 +116,6 @@ export function Hero({ onSelectTier }: HeroProps) {
       {/* Modern geometric shapes */}
       <div className="absolute top-1/4 right-20 w-40 h-40 bg-gradient-to-br from-yellow-500/20 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-gradient-to-tr from-blue-500/10 to-transparent rounded-full blur-3xl"></div>
-    </section>
+    </main>
   );
 }

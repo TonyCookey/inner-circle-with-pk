@@ -52,7 +52,7 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="about" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" aria-labelledby="about-heading">
       {/* Ultra-modern background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-black"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(245,158,11,0.1)_0%,transparent_60%)]"></div>

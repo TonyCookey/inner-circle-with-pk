@@ -1,8 +1,8 @@
-import { Crown, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 border-t border-gray-800 py-16 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gray-900 border-t border-gray-800 py-16 px-4 sm:px-6 lg:px-8" role="contentinfo">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
@@ -84,11 +84,12 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-yellow-500" />
-                <span className="text-gray-300">support@innercirclewithpk.com</span>
+                {/* <span className="text-gray-300">support@innercirclewithpk.com</span> */}
+                <span className="text-gray-300">mentalitywithpk@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-yellow-500" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+234 913 037 2356</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-yellow-500" />
@@ -102,7 +103,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">© 2025 Inner Circle with PK. All rights reserved.</p>
             <div className="hidden flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-yellow-500 text-sm transition-colors">
+              {/* <a href="#" className="text-gray-400 hover:text-yellow-500 text-sm transition-colors">
                 Privacy Policy
               </a>
               <a href="#" className="text-gray-400 hover:text-yellow-500 text-sm transition-colors">
@@ -110,7 +111,7 @@ export function Footer() {
               </a>
               <a href="#" className="text-gray-400 hover:text-yellow-500 text-sm transition-colors">
                 Refund Policy
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
