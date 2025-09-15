@@ -77,7 +77,7 @@ export function FAQ() {
 
         <div className="text-center mt-12">
           <p className="text-gray-400 mb-4">Still have questions?</p>
-          <a href="mailto:support@innercirclewithpk.com" className="text-yellow-500 hover:text-yellow-400 font-semibold transition-colors">
+          <a href="mailto:mentalitywithpk@gmail.com" className="text-yellow-500 hover:text-yellow-400 font-semibold transition-colors">
             Contact our team directly
           </a>
         </div>

@@ -10,7 +10,7 @@ export function Hero({ onSelectTier }: HeroProps) {
     <main className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden" role="main" aria-labelledby="hero-heading">
       {/* Hero background image */}
       <div className="absolute inset-0">
-        <img src="/pk-preaching-bg.jpg" alt="PK Teaching Crowd" className="w-full h-full object-cover object-right" />
+        <img src="/pk-preaching-bg-web.jpg" alt="PK Teaching Crowd" className="w-full h-full object-cover object-right" />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/30"></div>
         {/* Gradient overlay for depth */}
