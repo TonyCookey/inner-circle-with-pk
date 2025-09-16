@@ -10,7 +10,7 @@ export function Hero({ onSelectTier }: HeroProps) {
     <main className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden" role="main" aria-labelledby="hero-heading">
       {/* Hero background image */}
       <div className="absolute inset-0">
-        <img src="/pk-preaching-bg-web.jpg" alt="PK Teaching Crowd" className="w-full h-full object-cover object-right" />
+        <img src="/pk-preaching-bg-web.jpg" alt="PK Teaching Crowd" className="w-full h-full object-cover object-right " />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/30"></div>
         {/* Gradient overlay for depth */}
@@ -27,7 +27,7 @@ export function Hero({ onSelectTier }: HeroProps) {
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 grid-pattern opacity-20"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto mt-24 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto mt-28 text-center">
         {/* Status badge */}
         <div className="sm:inline-flex items-center space-x-3 glass-ultra px-8 py-4 rounded-full mb-4 animate-slide-up shadow-glow hidden">
           <div className="flex items-center space-x-2">
@@ -42,8 +42,8 @@ export function Hero({ onSelectTier }: HeroProps) {
         </div>
 
         {/* Main headline */}
-        <div className="mb-8 mt-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-          <h1 className="text-6xl md:text-8xl font-black mb-4 leading-tight">
+        <div className="mb-4 mt-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <h1 className="text-6xl md:text-8xl font-black mb-2 mt-20 md:mt-8 leading-tight">
             <Typewriter words={["Inner Circle"]} loop={30} cursor cursorStyle="" typeSpeed={200} deleteSpeed={50} delaySpeed={5000} />
             <br />
             <span className="text-clip-animate font-black flex items-center justify-center md:gap-20 text-center">with PK</span>
@@ -91,7 +91,7 @@ export function Hero({ onSelectTier }: HeroProps) {
           </a>
           <a
             href="#pricing"
-            className="btn-secondary text-white px-10 py-5 rounded-2xl font-semibold text-lg hover:text-yellow-500 transition-colors shadow-soft"
+            className="hidden md:block btn-secondary text-white px-10 py-5 rounded-2xl font-semibold hover:text-yellow-500 transition-colors shadow-soft"
             aria-label="See Pricing for Inner Circle"
           >
             See Pricing
