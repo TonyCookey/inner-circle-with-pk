@@ -50,7 +50,7 @@ export function MainMentor() {
             <div className="relative glass-ultra rounded-3xl  group-hover:scale-105 transition-all duration-700">
               <div className="relative overflow-hidden rounded-2xl">
                 <img
-                  src="/PK-on-suit.jpg"
+                  src="/pk.jpg"
                   alt="Pastor Kingsley Okonkwo"
                   className="w-full h-[400px] md:h-[600px] object-cover object-center group-hover:scale-110 transition-transform duration-1000"
                 />
