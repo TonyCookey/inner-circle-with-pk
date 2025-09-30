@@ -8,7 +8,6 @@ export function GuestSpeakers() {
       expertise: "Leadership Development, Personal Excellence",
       image: "/dr-sam-adeyemi.jpg",
       description: "Renowned leadership expert and founder of Daystar Leadership Academy, Dr. Sam has impacted millions through his teachings on leadership.",
-      highlight: "Global Impact Leader",
     },
     {
       name: "Dr. Cosmas Maduka",
@@ -17,7 +16,6 @@ export function GuestSpeakers() {
       image: "/cosmas-maduka.jpg",
       description:
         "Founder and CEO of Coscharis Group, a multi-billion naira conglomerate. Dr. Maduka is a testament to the power of vision, persistence, and strategic thinking.",
-      highlight: "Billionaire Entrepreneur",
     },
     {
       name: "Dr. Olumide Emmanuel",
@@ -26,7 +24,6 @@ export function GuestSpeakers() {
       image: "/olumide-emmanuel.jpg",
       description:
         "A visionary leader in Real estate and innovation, Dr. Emmanuel brings cutting-edge insights on mental transformation and strategic innovation.",
-      highlight: "Tech Visionary",
     },
     {
       name: "Kunle Soriyan",
@@ -34,7 +31,6 @@ export function GuestSpeakers() {
       expertise: "Media Strategy, Communications",
       image: "/kunle-soriyan.jpg",
       description: "Award-winning media professional and strategic communications expert with extensive experience in brand building and media strategy.",
-      highlight: "Media Strategist",
     },
     {
       name: "Wale Oyedeji",
@@ -42,7 +38,6 @@ export function GuestSpeakers() {
       expertise: "Business Growth, Strategic Planning",
       image: "/wale-oyedeji.jpg",
       description: "Seasoned business development expert with a proven track record of scaling businesses and creating sustainable growth strategies.",
-      highlight: "Growth Architect",
     },
     {
       name: "Foluso Phillips",
@@ -50,7 +45,6 @@ export function GuestSpeakers() {
       expertise: "Executive Coaching, Performance",
       image: "/foluso-philips.jpeg",
       description: "Elite executive coach specializing in high-performance leadership and strategic thinking for C-level executives and entrepreneurs.",
-      highlight: "Performance Expert",
     },
     {
       name: "Mildred Kingsley-Okonkwo",
@@ -58,7 +52,6 @@ export function GuestSpeakers() {
       expertise: "Leadership, Personal Development",
       image: "/mildred-kingsley-okonkwo.jpg",
       description: "Dynamic Relationship expert and personal development coach with extensive experience in transforming individuals and marraiges.",
-      highlight: "Transformation Catalyst",
     },
     {
       name: "Niyi Adesanya",
@@ -66,7 +59,13 @@ export function GuestSpeakers() {
       expertise: "Leadership, Personal Development",
       image: "/niyi-adesanya.jpg",
       description: "Dynamic leadership expert and personal development coach with extensive experience in transforming individuals and organizations.",
-      highlight: "Leadership Expert",
+    },
+    {
+      name: "Kola Adesina MFR, FNSE",
+      title: "Group Managing Director,  Sahara Power Group",
+      expertise: "Leadership, Personal Development",
+      image: "/kola-adesina.jpeg",
+      description: "Distinguished entrepreneur with multifaceted expertise across academia, finance, energy, international trade, and diplomacy.",
     },
   ];
 
