@@ -51,9 +51,12 @@ export function Hero({ onSelectTier }: HeroProps) {
         </div>
 
         {/* Subtitle */}
-        <p className="md:block md:text-lg text-sm mb-6 max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: "0.4s" }}>
-          Join an <span className="text-yellow-500 font-semibold">exclusive and private group coaching</span> for ambitious men committed to excellence. Access
-          world-class mentoring, and a network that elevates your success to unprecedented heights.
+        <p
+          className="md:block md:text-lg text-sm mb-6 max-w-3xl mx-auto leading-relaxed animate-slide-up merriweather-font tracking-wide"
+          style={{ animationDelay: "0.4s" }}
+        >
+          Join an <span className="text-yellow-500 font-semibold merriweather-font">exclusive and private group coaching</span> for ambitious men committed to
+          excellence. Access world-class mentoring, and a network that elevates your success to unprecedented heights.
         </p>
 
         {/* Value propositions */}

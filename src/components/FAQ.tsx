@@ -8,7 +8,7 @@ export function FAQ() {
     {
       question: "Who is PK and what makes this program unique?",
       answer:
-        "Dr. Kinglsey Okonkwo is a successful entrepreneur and mentor who has built multiple 7-figure businesses. The Inner Circle provides direct access to his proven strategies, plus connections with other industry leaders and successful members.",
+        "Dr. Kinglsey Okonkwo is a successful entrepreneur, pastor and mentor who has built multiple 7-figure businesses. The Inner Circle provides direct access to his proven strategies, plus connections with other industry leaders and successful members.",
     },
     {
       question: "What's the time commitment required?",
@@ -21,6 +21,10 @@ export function FAQ() {
         "While we welcome ambitious men at all levels, the content is designed for serious individuals ready to take action. Basic business knowledge is helpful but not required.",
     },
     {
+      question: "Are there additional benefits?",
+      answer: "You’ll form deep, lasting friendships with other men in the group, high-caliber connections that will enrich your life and career.",
+    },
+    {
       question: "How exclusive is the membership?",
       answer:
         "We maintain strict membership limits to ensure quality interactions. Applications are reviewed, and we reserve the right to decline membership to maintain community standards.",
@@ -29,6 +33,11 @@ export function FAQ() {
       question: "Are the payments secure?",
       answer:
         "Absolutely. We use industry-leading payment processors (Stripe, PayPal, Paystack, Mainstack) with bank-level security. Your financial information is never stored on our servers.",
+    },
+    {
+      question: "What if I can't afford the program?",
+      answer:
+        "We understand that financial situations vary. If you're genuinely interested in the program but facing financial constraints, please reach out to our team. Flexible subscription options are available: yearly, half-year, or quarterly plans.",
     },
     {
       question: "What happens if I miss a live session?",

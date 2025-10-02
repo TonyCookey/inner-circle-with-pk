@@ -116,7 +116,7 @@ export function MainMentor() {
                     <Quote className="h-6 w-6 text-yellow-500" />
                   </div>
                   <div>
-                    <blockquote className="text-sm md:text-xl font-medium text-white leading-relaxed mb-2 font-style-italic">
+                    <blockquote className="text-sm md:text-xl text-white leading-relaxed mb-2 playfair-font font-style-italic">
                       " My mission is to raise a generation of leaders who will impact their communities, industries, and nations with excellence, integrity,
                       and purpose. "
                     </blockquote>
