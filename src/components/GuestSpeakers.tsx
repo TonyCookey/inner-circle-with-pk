@@ -3,6 +3,13 @@ import { Star, Briefcase, TrendingUp, Users, Sparkles, Award, Crown } from "luci
 export function GuestSpeakers() {
   const speakers = [
     {
+      name: "Prof. Yemi Osinbajo",
+      title: "Former Vice President of Nigeria",
+      expertise: "Leadership Development, Governance",
+      image: "/yemi-osinbajo.jpg",
+      description: "Nigerian lawyer, professor, and politician who served as the 14th vice president of Nigeria from 2015 to 2023.",
+    },
+    {
       name: "Dr. Sam Adeyemi",
       title: "Leadership Expert & Author",
       expertise: "Leadership Development, Personal Excellence",
@@ -18,9 +25,16 @@ export function GuestSpeakers() {
         "Founder and CEO of Coscharis Group, a multi-billion naira conglomerate. Dr. Maduka is a testament to the power of vision, persistence, and strategic thinking.",
     },
     {
+      name: "Vusi Thembekwayo",
+      title: "Entrepreneur & Business Expert",
+      expertise: "Business Strategy, Entrepreneurship",
+      image: "/vusi-thembekwayo.jpg",
+      description: " South African entrepreneur, author, investor, speaker and businessman. He is the founder and CEO of the MyGrowthFund Venture Partners",
+    },
+    {
       name: "Dr. Olumide Emmanuel",
       title: "Leadership & Finance Expert",
-      expertise: "Innovation, Technology, Strategy",
+      expertise: "Finance & Business",
       image: "/olumide-emmanuel.jpg",
       description:
         "A visionary leader in Real estate and innovation, Dr. Emmanuel brings cutting-edge insights on mental transformation and strategic innovation.",
@@ -28,9 +42,9 @@ export function GuestSpeakers() {
     {
       name: "Kunle Soriyan",
       title: "Futurist, Strategist & Investor",
-      expertise: "Media Strategy, Communications",
+      expertise: "Strategy",
       image: "/kunle-soriyan.jpg",
-      description: "Award-winning media professional and strategic communications expert with extensive experience in brand building and media strategy.",
+      description: "Renowned Thought leader, Transformation Strategist, and Culture Shaper. He is also a global speaker and a best-selling author.",
     },
     {
       name: "Wale Oyedeji",
@@ -47,11 +61,25 @@ export function GuestSpeakers() {
       description: "Elite executive coach specializing in high-performance leadership and strategic thinking for C-level executives and entrepreneurs.",
     },
     {
+      name: "Dr. Albert Oduwole",
+      title: "Marriage and Relationship Expert",
+      expertise: "Marraige & Relationships",
+      image: "/dr-albert-oduwole.jpg",
+      description: "Relationship, Family & Life coach, Intl Conference Speaker, Best-Selling Author and Founder MarryMatics Consulting",
+    },
+    {
       name: "Mildred Kingsley-Okonkwo",
       title: "Marriage Coach & Relationship Expert",
-      expertise: "Leadership, Personal Development",
+      expertise: "Marriage & Relationships",
       image: "/mildred-kingsley-okonkwo.jpg",
       description: "Dynamic Relationship expert and personal development coach with extensive experience in transforming individuals and marraiges.",
+    },
+    {
+      name: "Dr. Shade Zahrai",
+      title: "Leadership Strategist",
+      expertise: "Leadership Expert",
+      image: "/shade-zahrai.webp",
+      description: "Award-Winning Leadership Strategist & Global Peak Performance Educator to Fortune 500s",
     },
     {
       name: "Niyi Adesanya",
@@ -61,11 +89,32 @@ export function GuestSpeakers() {
       description: "Dynamic leadership expert and personal development coach with extensive experience in transforming individuals and organizations.",
     },
     {
+      name: "Tunji Babajide",
+      title: "Leadership Personal Development Coach",
+      expertise: "Leadership, Personal Development",
+      image: "/tunji-babajide.jpg",
+      description: "Dynamic leadership expert and personal development coach with extensive experience in transforming individuals and organizations.",
+    },
+    {
       name: "Kola Adesina MFR, FNSE",
       title: "Group Managing Director,  Sahara Power Group",
-      expertise: "Leadership, Personal Development",
+      expertise: "Business & Finance",
       image: "/kola-adesina.jpeg",
       description: "Distinguished entrepreneur with multifaceted expertise across academia, finance, energy, international trade, and diplomacy.",
+    },
+    {
+      name: "Dr. Tony Akinyemi",
+      title: "Men’s Health Expert",
+      expertise: "Health",
+      image: "/tony-akinyemi.jpeg",
+      description: "Pioneer Holistic Health Coach in Nigeria. He is a Husband, Father, Nutritionist, Author, Entrepreneur and Engineer",
+    },
+    {
+      name: "Aproko Doctor",
+      title: "Health and Fitness Advocate",
+      expertise: "Health",
+      image: "/aproko-doctor.jpeg",
+      description: "Nigerian doctor, health influencer and an actor. He is the founder of Healthy Brands and 100K Club",
     },
   ];
 
@@ -150,17 +199,19 @@ export function GuestSpeakers() {
                   <img src={speaker.image} alt={speaker.name} className="w-full h-100 object-cover group-hover:scale-110 transition-transform duration-700" />
 
                   {/* Modern gradient overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent"></div>
 
                   {/* Name and title overlay */}
                   <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-xl font-black text-white mb-1 group-hover:text-yellow-500 transition-colors duration-300">{speaker.name}</h3>
-                    <p className="text-yellow-500 font-bold text-sm tracking-wide">{speaker.title}</p>
+                    <h3 className="text-2xl font-black text-white mb-1 group-hover:text-yellow-500 transition-colors duration-300 oswald-font">
+                      {speaker.name}
+                    </h3>
+                    <p className="text-yellow-500 font-bold text-sm merriweather-font">{speaker.title}</p>
                   </div>
                 </div>
 
                 {/* Content section */}
-                <div className="p-6">
+                <div className="p-6 h-30 ">
                   {/* Expertise badge */}
                   <div className="hidden mb-6">
                     <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-500/20 to-yellow-600/10 border border-yellow-500/30 px-4 py-2 rounded-full">
