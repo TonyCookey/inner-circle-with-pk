@@ -24,6 +24,11 @@ export function About() {
       features: [],
     },
     {
+      title: "Core Areas",
+      description: ["Our Focus for the Inner Circle will be on Seven Core Areas of Life:"],
+      features: ["Faith", "Family", "Finance", "Fitness", "Fatherhood", "Future", "Fulfillment"],
+    },
+    {
       title: "What You’ll Learn",
       description: [
         "The Inner Circle program is the most extensive men’s coaching experience I’ve ever seen—both in time and content. Across the year, we’ll cover critical areas of life and success, including:",
