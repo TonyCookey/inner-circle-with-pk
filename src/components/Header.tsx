@@ -17,7 +17,7 @@ export function Header() {
     <header className={`fixed top-0 w-full z-50 ${scrolled ? "glass-dark shadow-soft" : "bg-transparent"}`} role="banner">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6 px-2">
-          <a href="#">
+          <a href="/">
             <div className="flex items-center space-x-3 group">
               {/* <div className="relative">
                 <Crown className="h-10 w-10 text-yellow-500 group-hover:scale-110 transition-transform duration-300" />

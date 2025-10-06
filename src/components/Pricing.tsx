@@ -10,9 +10,9 @@ export function Pricing({ onSelectTier }: PricingProps) {
       id: "quarterly",
       name: "Quarterly",
       price: 450,
-      period: "every 3 months",
+      period: "3 months",
       icon: Zap,
-      description: "Pay every quarter",
+      description: "Pay in four installments",
       savings: null,
       color: "from-blue-500/20 to-blue-600/10",
       borderColor: "border-blue-500/30",
@@ -22,9 +22,9 @@ export function Pricing({ onSelectTier }: PricingProps) {
       id: "biannual",
       name: "Bi-Annual",
       price: 800,
-      period: "every 6 months",
+      period: "6 months",
       icon: Star,
-      description: "Pay twice a year",
+      description: "Pay in two installments",
       savings: "Save $200",
       color: "from-purple-500/20 to-purple-600/10",
       borderColor: "border-purple-500/30",
@@ -34,9 +34,8 @@ export function Pricing({ onSelectTier }: PricingProps) {
       id: "yearly",
       name: "Annual",
       price: 1500,
-      period: "per year",
       icon: Crown,
-      description: "Pay once a year",
+      description: "Pay once",
       savings: "Save $300",
       color: "from-yellow-500/30 to-yellow-600/20",
       borderColor: "border-yellow-500/30",
@@ -124,7 +123,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
                   {/* Price */}
                   <div className="mb-4">
                     <span className="text-4xl font-black text-white">${plan.price}</span>
-                    <span className="text-gray-400 ml-2 text-lg">/ {plan.period}</span>
+                    <span className="text-gray-400 ml-2 text-lg">{plan.period ? `/ ${plan.period}` : null}</span>
                   </div>
 
                   {/* Savings badge */}
