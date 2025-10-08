@@ -94,15 +94,17 @@ export function MainMentor() {
               <div className="space-y-6 text-gray-300 leading-relaxed text-md">
                 <p className="text-md leading-relaxed">
                   Dr. Kingsley is a <span className="text-yellow-500 font-semibold">visionary leader</span> and transformational mentor who has dedicated his
-                  life to developing exceptional leaders and building thriving communities across the globe.
+                  life to developing exceptional leaders across the globe.
                 </p>
                 <p>
-                  With over two decades of experience in leadership development, strategic planning, and personal transformation, PK has mentored thousands of
-                  individuals across various industries, helping them unlock their potential and achieve extraordinary success.
+                  With over <span className="text-yellow-500 font-semibold">three decades</span> of experience in leadership development, and personal
+                  transformation, PK has mentored millions of individuals across various industries, helping them unlock their potential and achieve
+                  extraordinary success.
                 </p>
                 <p>
-                  His unique approach combines <span className="text-yellow-500 font-semibold">spiritual wisdom</span>, practical business acumen, and proven
-                  leadership principles to create a comprehensive mentoring experience that transforms both personal and professional lives.
+                  His unique approach combines{" "}
+                  <span className="text-yellow-500 font-semibold">humour, spiritual wisdom, and proven leadership principles </span> to create a comprehensive
+                  mentoring experience that transforms both personal and professional lives.
                 </p>
               </div>
             </div>
@@ -116,7 +118,7 @@ export function MainMentor() {
                     <Quote className="h-6 w-6 text-yellow-500" />
                   </div>
                   <div>
-                    <blockquote className="text-sm md:text-xl text-white leading-relaxed mb-2 playfair-font font-style-italic">
+                    <blockquote className="text-sm md:text-lg text-white leading-relaxed mb-2 playfair-font font-style-italic">
                       " My mission is to raise a generation of leaders who will impact their communities, industries, and nations with excellence, integrity,
                       and purpose. "
                     </blockquote>

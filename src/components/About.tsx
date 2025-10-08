@@ -26,7 +26,7 @@ export function About() {
     {
       title: "Core Areas",
       description: ["Our Focus for the Inner Circle will be on Seven Core Areas of Life:"],
-      features: ["Faith", "Family", "Finance", "Fitness", "Fatherhood", "Future", "Fulfillment"],
+      features: ["Faith", "Family", "Fatherhood", "Finance", "Fitness", "Fulfillment", "Friendships", "Freedom", "Future"],
     },
     {
       title: "What You’ll Learn",

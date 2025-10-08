@@ -7,7 +7,7 @@ export function GuestSpeakers() {
       title: "Former Vice President of Nigeria",
       expertise: "Leadership Development, Governance",
       image: "/yemi-osinbajo.jpg",
-      description: "Nigerian lawyer, professor, and politician who served as the 14th vice president of Nigeria from 2015 to 2023.",
+      description: "Nigerian Lawyer, Professor, and Politician who served as the 14th Vice President of Nigeria from 2015 to 2023.",
     },
     {
       name: "Dr. Sam Adeyemi",
@@ -53,13 +53,13 @@ export function GuestSpeakers() {
       image: "/wale-oyedeji.jpg",
       description: "Seasoned business development expert with a proven track record of scaling businesses and creating sustainable growth strategies.",
     },
-    {
-      name: "Foluso Phillips",
-      title: "Executive Coach & Finance Expert",
-      expertise: "Executive Coaching, Performance",
-      image: "/foluso-philips.jpeg",
-      description: "Elite executive coach specializing in high-performance leadership and strategic thinking for C-level executives and entrepreneurs.",
-    },
+    // {
+    //   name: "Foluso Phillips",
+    //   title: "Executive Coach & Finance Expert",
+    //   expertise: "Executive Coaching, Performance",
+    //   image: "/foluso-philips.jpeg",
+    //   description: "Elite executive coach specializing in high-performance leadership and strategic thinking for C-level executives and entrepreneurs.",
+    // },
     {
       name: "Dr. Albert Oduwole",
       title: "Marriage and Relationship Expert",
@@ -90,7 +90,7 @@ export function GuestSpeakers() {
     },
     {
       name: "Tunji Babajide",
-      title: "Leadership Personal Development Coach",
+      title: "Leadership & Personal Development Coach",
       expertise: "Leadership, Personal Development",
       image: "/tunji-babajide.jpg",
       description: "Dynamic leadership expert and personal development coach with extensive experience in transforming individuals and organizations.",
