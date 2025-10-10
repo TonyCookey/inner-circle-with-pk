@@ -5,7 +5,7 @@ export function About() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
   const programDetails = [
     {
-      title: "Inner Circle VIP Coaching for Men",
+      title: "PK's Vision for the Inner Circle",
       description: [
         "I’m sitting right now at the center of my dreams. The life I’m living today is exactly what I envisioned and created five years ago. And here’s the incredible thing: you can do the same. You can design where you want to be in the next five years and actually get there. I know this because I’ve done it myself.",
 
@@ -25,8 +25,8 @@ export function About() {
     },
     {
       title: "Core Areas",
-      description: ["Our Focus for the Inner Circle will be on Seven Core Areas of Life:"],
-      features: ["Faith", "Family", "Fatherhood", "Finance", "Fitness", "Fulfillment", "Friendships", "Freedom", "Future"],
+      description: ["Our Focus for the Inner Circle will be on these Core Areas of Life:"],
+      features: ["Faith", "Family", "Fatherhood", "Finance", "Fitness ", "Fulfillment", "Friendships", "Freedom", "Faithfulness", "Future"],
     },
     {
       title: "What You’ll Learn",
@@ -62,16 +62,15 @@ export function About() {
         "Dr. Sam Adeyemi",
         "Dr. Cosmas Maduka",
         "Vusi Thembekwayo",
-        "Pastor Scott",
+        "Dr. Olumide Emmanuel",
         "Kunle Soriyan",
         "Wale Oyedeji",
         "Dr. Albert Oduwole",
-        "Dr. Olumide Emmanuel",
-        "Dr. Tony Akinyemi",
-        "Tunji Babajide",
-        "Niyi Adesanya",
         "Mildred Kingsley-Okonkwo",
         "Dr. Shade Zahrai",
+        "Niyi Adesanya",
+        "Dr. Tony Akinyemi",
+        "Tunji Babajide",
         "Kola Adesina",
         "Aproko Doctor",
         "And More...",

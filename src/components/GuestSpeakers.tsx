@@ -7,29 +7,30 @@ export function GuestSpeakers() {
       title: "Former Vice President of Nigeria",
       expertise: "Leadership Development, Governance",
       image: "/yemi-osinbajo.jpg",
-      description: "Nigerian Lawyer, Professor, and Politician who served as the 14th Vice President of Nigeria from 2015 to 2023.",
+      description: "Senior Advocate of Nigeria, Constitutional lawyer, Distinguished Scholar and Former Vice President of Nigeria (2015 – 2023).",
     },
     {
       name: "Dr. Sam Adeyemi",
       title: "Leadership Expert & Author",
       expertise: "Leadership Development, Personal Excellence",
       image: "/dr-sam-adeyemi.jpg",
-      description: "Renowned leadership expert and founder of Daystar Leadership Academy, Dr. Sam has impacted millions through his teachings on leadership.",
+      description: "Global Leadership Coach, Pastor, Bestselling Author, Founder of Daystar Christian Centre and the Daystar Leadership Academy.",
     },
     {
-      name: "Dr. Cosmas Maduka",
+      name: "Dr. Cosmas Maduka CON",
       title: "Business Mogul & Entrepreneur",
       expertise: "Business Strategy, Entrepreneurship",
       image: "/cosmas-maduka.jpg",
       description:
-        "Founder and CEO of Coscharis Group, a multi-billion naira conglomerate. Dr. Maduka is a testament to the power of vision, persistence, and strategic thinking.",
+        "Founder and CEO of Coscharis Group, a conglomerate valued at over US$500 million. A former board member of Access Bank and recipient of Nigeria’s national honour (CON).",
     },
     {
       name: "Vusi Thembekwayo",
       title: "Entrepreneur & Business Expert",
       expertise: "Business Strategy, Entrepreneurship",
       image: "/vusi-thembekwayo.jpg",
-      description: " South African entrepreneur, author, investor, speaker and businessman. He is the founder and CEO of the MyGrowthFund Venture Partners",
+      description:
+        "Globally renowned Entrepreneur, Investor, and Speaker with one of the most powerful voices in African business. He is the founder and CEO of the MyGrowthFund Venture Partners.",
     },
     {
       name: "Dr. Olumide Emmanuel",
@@ -37,7 +38,7 @@ export function GuestSpeakers() {
       expertise: "Finance & Business",
       image: "/olumide-emmanuel.jpg",
       description:
-        "A visionary leader in Real estate and innovation, Dr. Emmanuel brings cutting-edge insights on mental transformation and strategic innovation.",
+        "Popularly known as the Common Sense Guru, Dr. Olumide is one of Africa’s most influential thought leaders on wealth creation and personal transformation.",
     },
     {
       name: "Kunle Soriyan",
@@ -53,68 +54,67 @@ export function GuestSpeakers() {
       image: "/wale-oyedeji.jpg",
       description: "Seasoned business development expert with a proven track record of scaling businesses and creating sustainable growth strategies.",
     },
-    // {
-    //   name: "Foluso Phillips",
-    //   title: "Executive Coach & Finance Expert",
-    //   expertise: "Executive Coaching, Performance",
-    //   image: "/foluso-philips.jpeg",
-    //   description: "Elite executive coach specializing in high-performance leadership and strategic thinking for C-level executives and entrepreneurs.",
-    // },
     {
       name: "Dr. Albert Oduwole",
       title: "Marriage and Relationship Expert",
-      expertise: "Marraige & Relationships",
+      expertise: "Marriage & Relationships",
       image: "/dr-albert-oduwole.jpg",
-      description: "Relationship, Family & Life coach, Intl Conference Speaker, Best-Selling Author and Founder MarryMatics Consulting",
+      description:
+        "Internationally respected leadership expert and family life strategist who has devoted more than three decades to strengthening families and cultivating purposeful leaders.",
     },
     {
       name: "Mildred Kingsley-Okonkwo",
       title: "Marriage Coach & Relationship Expert",
       expertise: "Marriage & Relationships",
       image: "/mildred-kingsley-okonkwo.jpg",
-      description: "Dynamic Relationship expert and personal development coach with extensive experience in transforming individuals and marraiges.",
+      description:
+        "Pastor Mildred Kingsley Okonkwo, affectionately called PM, is a globally respected voice on faith, relationships, and women’s empowerment. She is one of the most influential female leaders in Africa.",
     },
     {
       name: "Dr. Shade Zahrai",
       title: "Leadership Strategist",
       expertise: "Leadership Expert",
       image: "/shade-zahrai.webp",
-      description: "Award-Winning Leadership Strategist & Global Peak Performance Educator to Fortune 500s",
+      description:
+        "Award-Winning Leadership Strategist & Global Peak Performance Educator to Fortune 500s. She is one of the most influential women in leadership development today.",
     },
     {
       name: "Niyi Adesanya",
       title: "Leadership & Development Expert",
       expertise: "Leadership, Personal Development",
       image: "/niyi-adesanya.jpg",
-      description: "Dynamic leadership expert and personal development coach with extensive experience in transforming individuals and organizations.",
+      description:
+        "Mr. Niyi Adesanya is widely regarded as one of Africa’s foremost leadership strategists. He is the Chief Executive Officer of FifthGear Plus Consulting.",
     },
     {
       name: "Tunji Babajide",
-      title: "Leadership & Personal Development Coach",
+      title: "Leadership & Performance Improvement Coach",
       expertise: "Leadership, Personal Development",
       image: "/tunji-babajide.jpg",
-      description: "Dynamic leadership expert and personal development coach with extensive experience in transforming individuals and organizations.",
+      description: " UK-certified life coach and one of Nigeria’s most respected voices on performance psychology and human behaviour.",
     },
     {
       name: "Kola Adesina MFR, FNSE",
       title: "Group Managing Director,  Sahara Power Group",
       expertise: "Business & Finance",
       image: "/kola-adesina.jpeg",
-      description: "Distinguished entrepreneur with multifaceted expertise across academia, finance, energy, international trade, and diplomacy.",
+      description: "Distinguished Entrepreneur with multifaceted expertise across academia, finance, energy, international trade, and diplomacy.",
     },
     {
       name: "Dr. Tony Akinyemi",
       title: "Men’s Health Expert",
       expertise: "Health",
       image: "/tony-akinyemi.jpeg",
-      description: "Pioneer Holistic Health Coach in Nigeria. He is a Husband, Father, Nutritionist, Author, Entrepreneur and Engineer",
+      description:
+        "Dr. Tony Akinyemi is a respected pastor, author, and holistic health advocate whose teachings have transformed lives for more than twenty years.",
     },
     {
-      name: "Aproko Doctor",
+      name: "Dr. Egemba Fidelis (Aproko Doctor)",
       title: "Health and Fitness Advocate",
       expertise: "Health",
       image: "/aproko-doctor.jpeg",
-      description: "Nigerian doctor, health influencer and an actor. He is the founder of Healthy Brands and 100K Club",
+      description:
+        "He is one of Africa’s most influential health advocates and digital content creators. A practicing physician, founder of the 100K Club, and award-winning influencer.",
     },
   ];
 
@@ -199,14 +199,14 @@ export function GuestSpeakers() {
                   <img src={speaker.image} alt={speaker.name} className="w-full h-100 object-cover group-hover:scale-110 transition-transform duration-700" />
 
                   {/* Modern gradient overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
                   {/* Name and title overlay */}
                   <div className="absolute bottom-6 left-6 right-6">
                     <h3 className="text-2xl font-black text-white mb-1 group-hover:text-yellow-500 transition-colors duration-300 oswald-font">
                       {speaker.name}
                     </h3>
-                    <p className="text-yellow-500 font-bold text-sm merriweather-font">{speaker.title}</p>
+                    <p className="text-yellow-400 font-bold text-sm merriweather-font">{speaker.title}</p>
                   </div>
                 </div>
 
