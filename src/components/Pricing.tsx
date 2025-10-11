@@ -147,7 +147,10 @@ export function Pricing({ onSelectTier }: PricingProps) {
           ))}
         </div>
         <div className="mb-20 mt-20 flex justify-center align-center">
-          <a href="https://mainstack.store/ldmproducts/pks-inner-circle" className="btn-ultra group px-20 py-5 flex items-center justify-center space-x-2">
+          <a
+            href="https://mainstack.store/ldmproducts/pks-inner-circle"
+            className="btn-ultra group px-10 md:px-20 py-5 flex items-center justify-center space-x-2"
+          >
             <span> Join the Inner Circle Now</span>
             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </a>

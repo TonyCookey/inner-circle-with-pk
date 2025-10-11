@@ -34,7 +34,7 @@ export function GuestSpeakers() {
     },
     {
       name: "Dr. Olumide Emmanuel",
-      title: "Leadership & Finance Expert",
+      title: "Relationship & Finance Expert",
       expertise: "Finance & Business",
       image: "/olumide-emmanuel.jpg",
       description:
@@ -56,7 +56,7 @@ export function GuestSpeakers() {
     },
     {
       name: "Dr. Albert Oduwole",
-      title: "Marriage and Relationship Expert",
+      title: "Marriage and Mentoring Expert",
       expertise: "Marriage & Relationships",
       image: "/dr-albert-oduwole.jpg",
       description:
@@ -72,8 +72,8 @@ export function GuestSpeakers() {
     },
     {
       name: "Dr. Shade Zahrai",
-      title: "Leadership Strategist",
-      expertise: "Leadership Expert",
+      title: "Global Peak Performance Educator",
+      expertise: "Leadership & Peak Performance",
       image: "/shade-zahrai.webp",
       description:
         "Award-Winning Leadership Strategist & Global Peak Performance Educator to Fortune 500s. She is one of the most influential women in leadership development today.",

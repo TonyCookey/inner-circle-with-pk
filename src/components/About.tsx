@@ -48,7 +48,7 @@ export function About() {
         "Life’s Laws",
         "Spiritual Growth",
         "Personal Growth",
-        "And Much More",
+        "And Much More.",
       ],
     },
     {
