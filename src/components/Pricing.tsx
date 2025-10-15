@@ -21,11 +21,12 @@ export function Pricing({ onSelectTier }: PricingProps) {
     {
       id: "biannual",
       name: "Bi-Annual",
-      price: 800,
+      price: 550,
+      originalPrice: 800,
       period: "6 months",
       icon: Star,
       description: "Pay in two installments",
-      savings: "Save $200",
+      savings: "Save $700",
       color: "from-purple-500/20 to-purple-600/10",
       borderColor: "border-purple-500/30",
       buttonStyle: "btn-secondary hover:bg-purple-600 text-white",
@@ -33,10 +34,11 @@ export function Pricing({ onSelectTier }: PricingProps) {
     {
       id: "yearly",
       name: "Annual",
-      price: 1500,
+      price: 1000,
+      originalPrice: 1500,
       icon: Crown,
       description: "Pay once",
-      savings: "Save $300",
+      savings: "Save $800",
       color: "from-yellow-500/30 to-yellow-600/20",
       borderColor: "border-yellow-500/30",
       buttonStyle: "btn-ultra hover:bg-yellow-600 text-gray-900",
@@ -121,9 +123,10 @@ export function Pricing({ onSelectTier }: PricingProps) {
                   <p className="text-gray-400 mb-4">{plan.description}</p>
 
                   {/* Price */}
-                  <div className="mb-4">
+                  <div className="mb-4 flex items-end justify-center gap-3">
+                    {plan.originalPrice && <span className="text-3xl font-bold text-gray-400 line-through">${plan.originalPrice}</span>}
                     <span className="text-4xl font-black text-white">${plan.price}</span>
-                    <span className="text-gray-400 ml-2 text-lg">{plan.period ? `/ ${plan.period}` : null}</span>
+                    <span className="text-gray-400 text-lg">{plan.period ? `/ ${plan.period}` : null}</span>
                   </div>
 
                   {/* Savings badge */}
