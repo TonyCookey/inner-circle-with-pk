@@ -22,7 +22,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
     {
       id: "biannual",
       name: "Bi-Annual",
-      price: 550,
+      price: 800,
       originalPrice: null,
       period: "6 months",
       icon: Star,
@@ -35,7 +35,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
     {
       id: "yearly",
       name: "Annual",
-      price: 1000,
+      price: 1500,
       originalPrice: null,
       icon: Crown,
       description: "Pay once",
