@@ -80,18 +80,18 @@ export function Hero({ onSelectTier }: HeroProps) {
 
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up" style={{ animationDelay: "0.8s" }}>
-          {/* <button onClick={() => onSelectTier("yearly")} className="btn-ultra group px-10 py-5 flex items-center justify-center space-x-2">
+          <button onClick={() => onSelectTier("yearly")} className="btn-ultra group px-10 py-5 flex items-center justify-center space-x-2">
             <span>Join the Circle</span>
             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </button> */}
-          <a
+          </button>
+          {/* <a
             href="https://mainstack.store/ldmproducts/pks-inner-circle"
             className="w-200 btn-ultra group px-10 py-5 flex items-center justify-center space-x-2"
             aria-label="Join the Inner Circle - Annual membership"
           >
             <span>Join the Circle</span>
             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </a> */}
           <a
             href="#pricing"
             className="hidden md:block btn-secondary text-white px-10 py-5 rounded-2xl font-semibold hover:text-yellow-500 transition-colors shadow-soft"

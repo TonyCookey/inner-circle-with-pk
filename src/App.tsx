@@ -5,7 +5,6 @@ import { About } from "./components/About";
 import { MainMentor } from "./components/MainMentor";
 import { GuestSpeakers } from "./components/GuestSpeakers";
 import { Pricing } from "./components/Pricing";
-import { Benefits } from "./components/Benefits";
 import { Registration } from "./components/Registration";
 import { FAQ } from "./components/FAQ";
 import { Footer } from "./components/Footer";
@@ -15,13 +14,13 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <Header />
+      <Header onSelectTier={setSelectedTier} />
       <Hero onSelectTier={setSelectedTier} />
-      <About />
+      <About onSelectTier={setSelectedTier} />
       <MainMentor />
       <GuestSpeakers />
       <Pricing onSelectTier={setSelectedTier} />
-      {selectedTier && <Registration tier={selectedTier} onClose={() => setSelectedTier(null)} />}
+      {selectedTier && <Registration onClose={() => setSelectedTier(null)} />}
       <FAQ />
       <Footer />
     </div>

@@ -1,7 +1,10 @@
 import { Target, Compass, Rocket, Crown, Users, Zap, Calendar, Award, Play, Sparkles, ArrowRight, ChevronUp, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
-export function About() {
+interface PricingProps {
+  onSelectTier: (tier: string) => void;
+}
+export function About({ onSelectTier }: PricingProps) {
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
   const programDetails = [
     {
@@ -371,10 +374,16 @@ export function About() {
 
         {/* Call to Action */}
         <div className="mt-20 flex justify-center align-center">
-          <a href="https://mainstack.store/ldmproducts/pks-inner-circle" className="btn-ultra group px-20 py-5 flex items-center justify-center space-x-2">
+          {/* <a href="https://mainstack.store/ldmproducts/pks-inner-circle" className="btn-ultra group px-20 py-5 flex items-center justify-center space-x-2">
             <span> Register Now</span>
             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </a> */}
+          <button
+            onClick={() => onSelectTier("inner-circle")}
+            className="px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 btn-ultra hover:bg-yellow-600 text-gray-900 shadow-lg hover:shadow-xl"
+          >
+            Join the Inner Circle Now
+          </button>
         </div>
 
         {/* Features Grid */}

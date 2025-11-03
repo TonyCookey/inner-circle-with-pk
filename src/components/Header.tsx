@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Crown } from "lucide-react";
-
-export function Header() {
+interface PricingProps {
+  onSelectTier: (tier: string) => void;
+}
+export function Header({ onSelectTier }: PricingProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -42,9 +44,12 @@ export function Header() {
                 <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300"></div>
               </a>
             ))}
-            <a href="https://mainstack.store/ldmproducts/pks-inner-circle" className="btn-primary text-gray-900 px-6 py-3 rounded-xl font-semibold text-sm">
+            {/* <a href="https://mainstack.store/ldmproducts/pks-inner-circle" className="btn-primary text-gray-900 px-6 py-3 rounded-xl font-semibold text-sm">
               Apply Now
-            </a>
+            </a> */}
+            <button onClick={() => onSelectTier("inner-circle")} className="btn-primary text-gray-900 px-6 py-3 rounded-xl font-semibold text-sm">
+              Sign up
+            </button>
           </nav>
 
           {/* Mobile menu button */}

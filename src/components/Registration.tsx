@@ -47,7 +47,7 @@ export function Registration({ onClose }: RegistrationProps) {
       setSuccess(true);
 
       // short delay to show success message
-      const redirectTo = "https://www.google.com";
+      const redirectTo = "https://checkout.mainstack.co/ldmproducts/1mbwKVIPSts8";
       setTimeout(() => {
         onClose(); // close modal
         window.location.href = redirectTo; // redirect to checkout

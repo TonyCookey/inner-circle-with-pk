@@ -160,7 +160,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
           </a> */}
           <button
             onClick={() => onSelectTier("inner-circle")}
-            className={`px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 btn-ultra hover:bg-yellow-600 text-gray-900 shadow-lg hover:shadow-xl`}
+            className="px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 btn-ultra hover:bg-yellow-600 text-gray-900 shadow-lg hover:shadow-xl"
           >
             Join the Inner Circle Now
           </button>
