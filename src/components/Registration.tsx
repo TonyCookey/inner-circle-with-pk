@@ -2,33 +2,62 @@ import React, { useState } from "react";
 import { X, CreditCard, DollarSign } from "lucide-react";
 
 interface RegistrationProps {
-  tier: string;
   onClose: () => void;
 }
 
-export function Registration({ tier, onClose }: RegistrationProps) {
+export function Registration({ onClose }: RegistrationProps) {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
     occupation: "",
-    goals: "",
-    paymentMethod: "stripe",
+    tier: "",
+    "bot-field": "",
   });
 
-  const tierDetails = {
-    quarterly: { name: "Quarterly", price: 300, period: "every 3 months" },
-    biannual: { name: "Bi-Annual", price: 550, period: "every 6 months" },
-    yearly: { name: "Annual", price: 1000, period: "per year" },
-  };
+  const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const currentTier = tierDetails[tier as keyof typeof tierDetails];
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Payment processing will be handled here
-    alert("Registration form submitted! Payment integration coming next.");
+    if (submitting) return;
+    setSubmitting(true);
+    setError(null);
+
+    // Netlify expects form-name and urlencoded body
+    const formName = "Registration";
+    const body = new URLSearchParams();
+    body.append("form-name", formName);
+    Object.entries(formData).forEach(([key, value]) => {
+      body.append(key, value as string);
+    });
+
+    try {
+      const res = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+      });
+
+      if (!res.ok) throw new Error(`Network response was ${res.status}`);
+
+      // success: show message, close modal, then redirect to checkout
+      setSuccess(true);
+
+      // short delay to show success message
+      const redirectTo = "https://www.google.com";
+      setTimeout(() => {
+        onClose(); // close modal
+        window.location.href = redirectTo; // redirect to checkout
+      }, 1400);
+    } catch (err: any) {
+      setError("Submission failed. Please try again.");
+      console.error("Netlify form submit error:", err);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -48,17 +77,17 @@ export function Registration({ tier, onClose }: RegistrationProps) {
           </button>
         </div>
 
-        <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-6 mb-8">
-          <div className="flex items-center space-x-3 mb-2">
-            <CreditCard className="h-6 w-6 text-yellow-500" />
-            <h3 className="text-xl font-semibold">{currentTier.name} Membership</h3>
-          </div>
-          <p className="text-2xl font-bold text-yellow-500">
-            ${currentTier.price} <span className="text-sm text-gray-400">{currentTier.period}</span>
-          </p>
-        </div>
+        <form name="Registration" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-6">
+          {/* Netlify requires this hidden input */}
+          <input type="hidden" name="form-name" value="Registration" />
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+          {/* honeypot field */}
+          <p className="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" onChange={handleChange} />
+            </label>
+          </p>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">First Name *</label>
@@ -121,51 +150,29 @@ export function Registration({ tier, onClose }: RegistrationProps) {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">What are your primary goals? *</label>
-            <textarea
-              name="goals"
-              value={formData.goals}
-              onChange={handleChange}
-              required
-              rows={4}
-              className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-yellow-500 focus:outline-none"
-              placeholder="Tell us about your business goals, personal development objectives, and what you hope to achieve..."
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">Payment Method</label>
+            <label className="block text-sm font-medium text-gray-300 mb-2">Payment Tier</label>
             <select
-              name="paymentMethod"
-              value={formData.paymentMethod}
+              name="tier"
+              value={formData.tier}
               onChange={handleChange}
               className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-yellow-500 focus:outline-none"
             >
-              <option value="stripe">Stripe (Credit/Debit Card)</option>
-              <option value="paypal">PayPal</option>
-              <option value="paystack">Paystack</option>
-              <option value="mainstack">Mainstack</option>
+              <option value="quarterly">Quarterly</option>
+              <option value="biannual">Bi-Annual</option>
+              <option value="yearly">Annual</option>
             </select>
-          </div>
-
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-            <div className="flex items-center space-x-3 mb-4">
-              <DollarSign className="h-5 w-5 text-yellow-500" />
-              <h4 className="font-semibold">Payment Summary</h4>
-            </div>
-            <div className="flex justify-between items-center text-lg">
-              <span>{currentTier.name} Membership</span>
-              <span className="font-bold">${currentTier.price}</span>
-            </div>
-            <p className="text-sm text-gray-400 mt-2">Billed {currentTier.period}</p>
           </div>
 
           <button
             type="submit"
-            className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+            disabled={submitting}
+            className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-60"
           >
-            Complete Registration - ${currentTier.price}
+            {submitting ? "Submitting..." : "Complete Registration"}
           </button>
+
+          {success && <p className="text-green-400 text-center mt-2">Registration successful — redirecting to checkout…</p>}
+          {error && <p className="text-red-400 text-center mt-2">{error}</p>}
         </form>
 
         <p className="text-xs text-gray-500 text-center mt-6">
