@@ -38,3 +38,6 @@ public/pk-teaching-crowd-1.jpeg
 public/pk-teaching-crowd-10.jpg
 public/pk-preaching-4.jpg
 public/logo-ldm.png
+
+# Local Netlify folder
+.netlify

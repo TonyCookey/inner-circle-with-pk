@@ -12,7 +12,7 @@ export function Registration({ onClose }: RegistrationProps) {
     email: "",
     phone: "",
     occupation: "",
-    tier: "",
+    tier: "quarterly",
     "bot-field": "",
   });
 
@@ -26,35 +26,30 @@ export function Registration({ onClose }: RegistrationProps) {
     setSubmitting(true);
     setError(null);
 
-    // Netlify expects form-name and urlencoded body
-    const formName = "Registration";
-    const body = new URLSearchParams();
-    body.append("form-name", formName);
-    Object.entries(formData).forEach(([key, value]) => {
-      body.append(key, value as string);
-    });
-
     try {
-      const res = await fetch("/", {
+      const res = await fetch("/.netlify/functions/registrations", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
 
-      if (!res.ok) throw new Error(`Network response was ${res.status}`);
+      const payload = await res.json();
 
-      // success: show message, close modal, then redirect to checkout
+      if (!res.ok) {
+        throw new Error(payload?.error || `Request failed (${res.status})`);
+      }
+
       setSuccess(true);
 
-      // short delay to show success message
-      const redirectTo = "https://checkout.mainstack.co/ldmproducts/1mbwKVIPSts8";
+      // short delay to show success message then redirect
+      const redirectTo = payload?.redirect || "https://checkout.mainstack.co/ldmproducts/1mbwKVIPSts8";
       setTimeout(() => {
-        onClose(); // close modal
-        window.location.href = redirectTo; // redirect to checkout
-      }, 1400);
+        onClose();
+        window.location.href = redirectTo;
+      }, 1200);
     } catch (err: any) {
+      console.error("Function submit error:", err);
       setError("Submission failed. Please try again.");
-      console.error("Netlify form submit error:", err);
     } finally {
       setSubmitting(false);
     }
@@ -77,14 +72,12 @@ export function Registration({ onClose }: RegistrationProps) {
           </button>
         </div>
 
-        <form name="Registration" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-6">
-          {/* Netlify requires this hidden input */}
-          <input type="hidden" name="form-name" value="Registration" />
-
+        <form onSubmit={handleSubmit} className="space-y-6">
           {/* honeypot field */}
+          <input type="hidden" name="form-name" value="Registration" />
           <p className="hidden">
             <label>
-              Don’t fill this out if you’re human: <input name="bot-field" onChange={handleChange} />
+              Don’t fill this out if you’re human: <input name="bot-field" onChange={handleChange} value={formData["bot-field"]} />
             </label>
           </p>
 
@@ -97,7 +90,7 @@ export function Registration({ onClose }: RegistrationProps) {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
-                className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-yellow-500 focus:outline-none"
+                className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
               />
             </div>
             <div>
@@ -108,7 +101,7 @@ export function Registration({ onClose }: RegistrationProps) {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
-                className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-yellow-500 focus:outline-none"
+                className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
               />
             </div>
           </div>
@@ -121,7 +114,7 @@ export function Registration({ onClose }: RegistrationProps) {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-yellow-500 focus:outline-none"
+              className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
             />
           </div>
 
@@ -133,7 +126,7 @@ export function Registration({ onClose }: RegistrationProps) {
               value={formData.phone}
               onChange={handleChange}
               required
-              className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-yellow-500 focus:outline-none"
+              className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
             />
           </div>
 
@@ -145,7 +138,7 @@ export function Registration({ onClose }: RegistrationProps) {
               value={formData.occupation}
               onChange={handleChange}
               required
-              className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-yellow-500 focus:outline-none"
+              className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
             />
           </div>
 
@@ -155,7 +148,7 @@ export function Registration({ onClose }: RegistrationProps) {
               name="tier"
               value={formData.tier}
               onChange={handleChange}
-              className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-yellow-500 focus:outline-none"
+              className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
             >
               <option value="quarterly">Quarterly</option>
               <option value="biannual">Bi-Annual</option>
@@ -171,7 +164,7 @@ export function Registration({ onClose }: RegistrationProps) {
             {submitting ? "Submitting..." : "Complete Registration"}
           </button>
 
-          {success && <p className="text-green-400 text-center mt-2">Registration successful — redirecting to checkout…</p>}
+          {success && <p className="text-green-400 text-lg text-center mt-2">Registration successful — redirecting to checkout…</p>}
           {error && <p className="text-red-400 text-center mt-2">{error}</p>}
         </form>
 
