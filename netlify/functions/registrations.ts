@@ -4,9 +4,9 @@ import { Client } from "pg";
 const REDIRECT_URL = "https://checkout.mainstack.co/ldmproducts/1mbwKVIPSts8";
 
 const getClient = () => {
-  const connectionString = process.env.NEON_DATABASE_URL || process.env.DATABASE_URL;
+  const connectionString = process.env.NETLIFY_DATABASE_URL || process.env.DATABASE_URL;
   if (!connectionString) {
-    throw new Error("NEON_DATABASE_URL / DATABASE_URL is not set");
+    throw new Error("NETLIFY_DATABASE_URL / DATABASE_URL is not set");
   }
   return new Client({ connectionString });
 };
