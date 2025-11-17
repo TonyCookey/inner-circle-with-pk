@@ -41,6 +41,14 @@ export function GuestSpeakers() {
         "Popularly known as the Common Sense Guru, Dr. Olumide is one of Africa’s most influential thought leaders on wealth creation and personal transformation.",
     },
     {
+      name: "Fela Durotoye",
+      title: "Leadership Expert",
+      expertise: "Leadership & Business",
+      image: "/fela-durotoye.jpg",
+      description:
+        "Fela Durotoye is a business consultant, leadership expert, politician, and motivational speaker. Fela is the president of the GEMSTONE Nation Builders Foundation.",
+    },
+    {
       name: "Kunle Soriyan",
       title: "Futurist, Strategist & Investor",
       expertise: "Strategy",
@@ -79,12 +87,27 @@ export function GuestSpeakers() {
         "Award-Winning Leadership Strategist & Global Peak Performance Educator to Fortune 500s. She is one of the most influential women in leadership development today.",
     },
     {
+      name: "Bisi Adewale",
+      title: "Certified Marraige Clinician & Relationship Expert",
+      expertise: "Leadership & Peak Performance",
+      image: "/bisi-adewale.jpg",
+      description:
+        "Bisi Adewale is the President of College of Marital Success. He's a Certified Marriage Clinician, Relationship Expert, and Author of over 130 books on marriage and relationships.",
+    },
+    {
       name: "Niyi Adesanya",
       title: "Leadership & Development Expert",
       expertise: "Leadership, Personal Development",
       image: "/niyi-adesanya.jpg",
       description:
-        "Mr. Niyi Adesanya is widely regarded as one of Africa’s foremost leadership strategists. He is the Chief Executive Officer of FifthGear Plus Consulting.",
+        "Niyi Adesanya is widely regarded as one of Africa’s foremost leadership strategists. He is the Chief Executive Officer of FifthGear Plus Consulting.",
+    },
+    {
+      name: "Kola Adesina MFR, FNSE",
+      title: "Group Managing Director,  Sahara Power Group",
+      expertise: "Business & Finance",
+      image: "/kola-adesina.jpeg",
+      description: "Distinguished Entrepreneur with multifaceted expertise across academia, finance, energy, international trade, and diplomacy.",
     },
     {
       name: "Tunji Babajide",
@@ -94,11 +117,12 @@ export function GuestSpeakers() {
       description: " UK-certified life coach and one of Nigeria’s most respected voices on performance psychology and human behaviour.",
     },
     {
-      name: "Kola Adesina MFR, FNSE",
-      title: "Group Managing Director,  Sahara Power Group",
-      expertise: "Business & Finance",
-      image: "/kola-adesina.jpeg",
-      description: "Distinguished Entrepreneur with multifaceted expertise across academia, finance, energy, international trade, and diplomacy.",
+      name: "Ezekiel Solesi",
+      title: "Business & Entreprenuership Expert",
+      expertise: "Leadership, Personal Development",
+      image: "/ezekiel-solesi.jpeg",
+      description:
+        "Ezekiel Solesi is a strategy Expert, member, Forbes Coaches Council, prolific author, insightful speaker and a serial entrepreneur. The CEO of LIMBsimple ",
     },
     {
       name: "Dr. Tony Akinyemi",
