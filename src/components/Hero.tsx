@@ -8,8 +8,6 @@ interface HeroProps {
 export function Hero({ onSelectTier }: HeroProps) {
   const FREE_SESSION_URL = "https://bit.ly/ICFREECLASS";
 
-  // top scroller sits below the navbar — uses CSS variable --nav-height if set by your navbar
-  // improves contrast, rounded corners, pause-on-hover, reduced-motion support, and focus styles
   return (
     <main className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden" role="main" aria-labelledby="hero-heading">
       {/* Top horizontal scroller (elegant ribbon below navbar) */}
@@ -19,7 +17,7 @@ export function Hero({ onSelectTier }: HeroProps) {
         aria-hidden={false}
       >
         <div className="relative">
-          <div className="rounded-full bg-gradient-to-r from-yellow-600/8 via-black/40 to-yellow-600/8 backdrop-blur-md shadow-lg ring-2 ring-white/6 overflow-hidden">
+          <div className="rounded-full bg-gradient-to-r from-yellow-600/8 via-black/40 to-yellow-600/8 backdrop-blur-md shadow-lg ring-white/6 overflow-hidden">
             <div
               className="marquee flex items-center whitespace-nowrap gap-8 py-2 px-6"
               role="region"
