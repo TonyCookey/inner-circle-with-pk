@@ -220,7 +220,7 @@ export function About({ onSelectTier }: PricingProps) {
             </div>
           </div>
           <div className="mt-20 flex justify-center align-center">
-            <a href="https://bit.ly/ICFREECLASS" target="_blank" className="btn-ultra group px-20 py-5 flex items-center justify-center space-x-2">
+            <a href="https://bit.ly/ICFREECLASS" target="_blank" className="btn-ultra group px-10 py-5 flex items-center justify-center space-x-2">
               <span> Attend the First Session Free! </span>
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
