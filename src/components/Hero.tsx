@@ -10,72 +10,6 @@ export function Hero({ onSelectTier }: HeroProps) {
 
   return (
     <main className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden" role="main" aria-labelledby="hero-heading">
-      {/* Top horizontal scroller (elegant ribbon below navbar) */}
-      <div
-        className="absolute left-1/2 transform -translate-x-1/2 w-[min(1200px,92%)] z-30"
-        style={{ top: "calc(var(--nav-height, 72px) + 12px)" }}
-        aria-hidden={false}
-      >
-        <div className="relative">
-          <div className="rounded-full bg-gradient-to-r from-yellow-600/8 via-black/40 to-yellow-600/8 backdrop-blur-md shadow-lg ring-white/6 overflow-hidden">
-            <div
-              className="marquee flex items-center whitespace-nowrap gap-8 py-2 px-6"
-              role="region"
-              aria-label="Free first session — open external booking form"
-              tabIndex={0}
-            >
-              {/*
-                duplicate items so animation looks seamless.
-                pause-on-hover via .marquee:hover and keyboard focus via :focus
-              */}
-              <a
-                href={FREE_SESSION_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 text-sm md:text-base text-yellow-400 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400/40"
-                aria-label="Register for your free first session (opens in new tab)"
-              >
-                <strong className="mr-1">Free Inner Circle First Session</strong> — Register Now <ArrowRight className="w-4 h-4" />
-              </a>
-              <span className="text-gray-400">•</span>
-              <a href={FREE_SESSION_URL} target="_blank" rel="noopener noreferrer" className="text-sm md:text-base text-yellow-400 font-medium">
-                Claim your first free session — secure your spot
-              </a>
-              <span className="text-gray-400">•</span>
-              <a href={FREE_SESSION_URL} target="_blank" rel="noopener noreferrer" className="text-sm md:text-base text-yellow-400 font-medium">
-                Experience the First Session Free — Book Now →
-              </a>
-
-              {/* duplicate */}
-              <a
-                href={FREE_SESSION_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 text-sm md:text-base text-yellow-400 font-medium"
-              >
-                <strong className="mr-1">Free first session</strong> — Book your slot now (limited spots) <ArrowRight className="w-4 h-4" />
-              </a>
-              <span className="text-gray-400">•</span>
-              <a href={FREE_SESSION_URL} target="_blank" rel="noopener noreferrer" className="text-sm md:text-base text-yellow-400 font-medium">
-                Claim your free session — secure your spot →
-              </a>
-            </div>
-          </div>
-          <style>{`
-            .marquee { display: flex; gap: 1.5rem; transform: translateX(0); }
-            @keyframes hero-marquee {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(-50%); }
-            }
-            .marquee { animation: hero-marquee 20s linear infinite; animation-play-state: running; }
-            .marquee:hover, .marquee:focus-within { animation-play-state: paused; }
-            @media (prefers-reduced-motion: reduce) {
-              .marquee { animation: none; }
-            }
-          `}</style>
-        </div>
-      </div>
-
       {/* Hero background image */}
       <div className="absolute inset-0">
         <img src="/pk-preaching-bg-web.jpg" alt="PK Teaching Crowd" className="w-full h-full object-cover object-right " />
@@ -161,11 +95,11 @@ export function Hero({ onSelectTier }: HeroProps) {
             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </a> */}
           <a
-            href={FREE_SESSION_URL}
+            href="#pricing"
             className="btn-secondary text-white px-10 py-5 rounded-2xl font-semibold hover:text-yellow-500 transition-colors shadow-soft"
             aria-label="See Pricing for Inner Circle"
           >
-            Attend Free Session
+            See Pricing
           </a>
         </div>
 
