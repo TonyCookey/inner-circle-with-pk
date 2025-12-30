@@ -7,6 +7,19 @@ interface PricingProps {
 export function Pricing({ onSelectTier }: PricingProps) {
   const plans = [
     {
+      id: "monthly",
+      name: "Monthly",
+      price: 170,
+      originalPrice: null,
+      period: "month",
+      icon: Zap,
+      description: "Pay every month",
+      savings: null,
+      color: "from-blue-200/20 to-blue-300/10",
+      borderColor: "border-blue-300/30",
+      buttonStyle: "btn-secondary hover:bg-blue-300 text-white",
+    },
+    {
       id: "quarterly",
       name: "Quarterly",
       price: 450,
@@ -14,7 +27,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
       period: "3 months",
       icon: Zap,
       description: "Pay in four installments",
-      savings: null,
+      savings: "Save $200",
       color: "from-blue-500/20 to-blue-600/10",
       borderColor: "border-blue-500/30",
       buttonStyle: "btn-secondary hover:bg-blue-600 text-white",
@@ -27,7 +40,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
       period: "6 months",
       icon: Star,
       description: "Pay in two installments",
-      savings: "Save $200",
+      savings: "Save $400",
       color: "from-purple-500/20 to-purple-600/10",
       borderColor: "border-purple-500/30",
       buttonStyle: "btn-secondary hover:bg-purple-600 text-white",
@@ -39,7 +52,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
       originalPrice: null,
       icon: Crown,
       description: "Pay once",
-      savings: "Save $300",
+      savings: "Save $500",
       color: "from-yellow-500/30 to-yellow-600/20",
       borderColor: "border-yellow-500/30",
       buttonStyle: "btn-ultra hover:bg-yellow-600 text-gray-900",
@@ -94,7 +107,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
         </div>
 
         {/* Payment Plans */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           {plans.map((plan, index) => (
             <div key={plan.id} className="group relative" style={{ animationDelay: `${index * 0.1}s` }}>
               {/* Popular badge */}

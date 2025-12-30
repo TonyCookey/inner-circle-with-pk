@@ -1,7 +1,6 @@
 import { Handler } from "@netlify/functions";
 import { Client } from "pg";
 
-// const REDIRECT_URL = "https://checkout.mainstack.co/ldmproducts/1mbwKVIPSts8";
 const REDIRECT_URL = "https://mainstack.store/ldmproducts/pks-inner-circle";
 
 const getClient = () => {

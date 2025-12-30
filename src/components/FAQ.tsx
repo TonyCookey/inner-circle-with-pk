@@ -31,13 +31,12 @@ export function FAQ() {
     },
     {
       question: "Are the payments secure?",
-      answer:
-        "Absolutely. We use industry-leading payment processors (Stripe, PayPal, Paystack, Mainstack) with bank-level security. Your financial information is never stored on our servers.",
+      answer: "Absolutely. We use industry-leading payment processors. Your financial information is never stored on our servers.",
     },
     {
       question: "What if I can't afford the program?",
       answer:
-        "We understand that financial situations vary. If you're genuinely interested in the program but facing financial constraints, please reach out to our team. Flexible subscription options are available: yearly, half-year, or quarterly plans.",
+        "We understand that financial situations vary. If you're genuinely interested in the program but facing financial constraints, please reach out to our team. Flexible subscription options are available: yearly, half-year, quarterly and monthly plans.",
     },
     {
       question: "What happens if I miss a live session?",
