@@ -18,7 +18,7 @@ export function FAQ() {
     {
       question: "Is this suitable for beginners?",
       answer:
-        "While we welcome ambitious men at all levels, the content is designed for serious individuals ready to take action. Basic business knowledge is helpful but not required.",
+        "While we welcome ambitious men at all levels, the content is designed for serious individuals ready to take action. Yes, we welcome men from all works of life and at all stages.",
     },
     {
       question: "Are there additional benefits?",
