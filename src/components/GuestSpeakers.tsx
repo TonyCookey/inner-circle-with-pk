@@ -3,13 +3,6 @@ import { Star, Briefcase, TrendingUp, Users, Sparkles, Award, Crown } from "luci
 export function GuestSpeakers() {
   const speakers = [
     {
-      name: "Prof. Yemi Osinbajo",
-      title: "Former Vice President of Nigeria",
-      expertise: "Leadership Development, Governance",
-      image: "/yemi-osinbajo.jpg",
-      description: "Senior Advocate of Nigeria, Constitutional lawyer, Distinguished Scholar and Former Vice President of Nigeria (2015 – 2023).",
-    },
-    {
       name: "Dr. Sam Adeyemi",
       title: "Leadership Expert & Author",
       expertise: "Leadership Development, Personal Excellence",
@@ -108,6 +101,14 @@ export function GuestSpeakers() {
       expertise: "Business & Finance",
       image: "/kola-adesina.jpeg",
       description: "Distinguished Entrepreneur with multifaceted expertise across academia, finance, energy, international trade, and diplomacy.",
+    },
+    {
+      name: "Iyin Aboyeji",
+      title: "Entrepreneur & Technology Innovator",
+      expertise: "Leadership Development, Technology",
+      image: "/iyin-aboyeji.jpeg",
+      description:
+        "Iyin Aboyeji is a renowned entrepreneur and technology innovator, known for his impactful contributions to the Tech industry and leadership development.",
     },
     {
       name: "Tunji Babajide",
