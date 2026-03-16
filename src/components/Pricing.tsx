@@ -33,8 +33,8 @@ export function Pricing({ onSelectTier }: PricingProps) {
       buttonStyle: "btn-secondary hover:bg-blue-600 text-white",
     },
     {
-      id: "biannual",
-      name: "Bi-Annual",
+      id: "biyearly",
+      name: "Bi-Yearly",
       price: 800,
       originalPrice: null,
       period: "6 months",
@@ -47,9 +47,9 @@ export function Pricing({ onSelectTier }: PricingProps) {
     },
     {
       id: "yearly",
-      name: "Annual",
-      price: 1500,
-      originalPrice: null,
+      name: "Yearly",
+      price: 1200,
+      originalPrice: 1500,
       icon: Crown,
       description: "Pay once",
       savings: "Save $500",
