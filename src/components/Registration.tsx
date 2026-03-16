@@ -13,6 +13,7 @@ export function Registration({ onClose }: RegistrationProps) {
     phone: "",
     occupation: "",
     tier: "quarterly",
+    paymentMethod: "paystack",
     "bot-field": "",
   });
 
@@ -42,7 +43,7 @@ export function Registration({ onClose }: RegistrationProps) {
       setSuccess(true);
 
       // short delay to show success message then redirect
-      const redirectTo = payload?.redirect || "https://checkout.mainstack.co/ldmproducts/1mbwKVIPSts8";
+      const redirectTo = payload?.redirect;
       setTimeout(() => {
         onClose();
         window.location.href = redirectTo;
@@ -63,7 +64,7 @@ export function Registration({ onClose }: RegistrationProps) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/75 flex items-center justify-center p-4 z-50">
+    <div className="fixed inset-0 bg-black/75 flex items-center justify-center p-8 z-50">
       <div className="bg-gray-900 rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-gray-700">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold">Join Inner Circle</h2>
@@ -117,50 +118,65 @@ export function Registration({ onClose }: RegistrationProps) {
               className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
             />
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Phone Number *</label>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
+              />
+            </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">Phone Number *</label>
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-              className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
-            />
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Current Occupation *</label>
+              <input
+                type="text"
+                name="occupation"
+                value={formData.occupation}
+                onChange={handleChange}
+                required
+                className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
+              />
+            </div>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Payment Tier</label>
+              <select
+                name="tier"
+                value={formData.tier}
+                onChange={handleChange}
+                className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
+              >
+                <option value="monthly">Monthly</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="biyearly">Bi-Yearly</option>
+                <option value="yearly">Yearly</option>
+              </select>
+            </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">Current Occupation *</label>
-            <input
-              type="text"
-              name="occupation"
-              value={formData.occupation}
-              onChange={handleChange}
-              required
-              className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">Payment Tier</label>
-            <select
-              name="tier"
-              value={formData.tier}
-              onChange={handleChange}
-              className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
-            >
-              <option value="monthly">Monthly</option>
-              <option value="quarterly">Quarterly</option>
-              <option value="biannual">Bi-Annual</option>
-              <option value="yearly">Annual</option>
-            </select>
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Payment Method</label>
+              <select
+                name="paymentMethod"
+                value={formData.paymentMethod}
+                onChange={handleChange}
+                className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
+              >
+                <option value="paystack">Paystack</option>
+                <option value="stripe">Stripe</option>
+              </select>
+            </div>
           </div>
 
           <button
             type="submit"
             disabled={submitting}
-            className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-60"
+            className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-60 my-10"
           >
             {submitting ? "Submitting..." : "Complete Registration"}
           </button>
