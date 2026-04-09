@@ -19,8 +19,8 @@ const getRedirectUrl = (paymentMethod: string, tier: string) => {
     },
     paystack: {
       monthly: "https://paystack.shop/pay/ak8zkqxmc9",
-      quarterly: "https://paystack.shop/pay/zsmuumqjd7",
-      "bi-annual": "https://paystack.shop/pay/pcb3nxut8s",
+      quarterly: "https://paystack.shop/pay/pcb3nxut8s",
+      "bi-annual": "https://paystack.shop/pay/8hbiskh2-k",
       annual: "https://paystack.shop/pay/wwo-sj1eo9",
     },
   };
