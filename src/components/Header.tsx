@@ -1,11 +1,19 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Crown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 interface PricingProps {
   onSelectTier: (tier: string) => void;
 }
 export function Header({ onSelectTier }: PricingProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navItems = [
+    { label: "Conference", href: "#conference" },
+    { label: "About", href: "#about" },
+    { label: "Meet PK", href: "#meet-pk" },
+    { label: "Mentors", href: "#mentors" },
+    { label: "Pricing", href: "#pricing" },
+    { label: "FAQs", href: "#faqs" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,13 +42,13 @@ export function Header({ onSelectTier }: PricingProps) {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8" aria-label="Primary Navigation" role="navigation">
-            {["About", "Meet PK", "Mentors", "Pricing", "FAQs"].map((item) => (
+            {navItems.map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
+                key={item.label}
+                href={item.href}
                 className="relative text-gray-300 hover:text-yellow-500 transition-colors duration-300 font-medium group"
               >
-                {item}
+                {item.label}
                 <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300"></div>
               </a>
             ))}
@@ -66,17 +74,25 @@ export function Header({ onSelectTier }: PricingProps) {
         {isOpen && (
           <div className="md:hidden pb-6 border-t border-gray-800/50 mt-4 pt-6">
             <nav className="flex flex-col space-y-4" aria-label="Mobile Primary Navigation" role="navigation">
-              {["About PK", "Mentors", "Pricing", "FAQs"].map((item) => (
+              {navItems.map((item) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                  key={item.label}
+                  href={item.href}
                   className="text-gray-300 hover:text-yellow-500 transition-colors font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
-                  {item}
+                  {item.label}
                 </a>
               ))}
-              <button className="btn-primary text-gray-900 px-6 py-3 rounded-xl font-semibold text-sm mt-4">Apply Now</button>
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  onSelectTier("inner-circle");
+                }}
+                className="btn-primary text-gray-900 px-6 py-3 rounded-xl font-semibold text-sm mt-4"
+              >
+                Sign up
+              </button>
             </nav>
           </div>
         )}
