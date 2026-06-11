@@ -152,7 +152,7 @@ export function Registration({ onClose }: RegistrationProps) {
                 onChange={handleChange}
                 className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
               >
-                <option value="monthly">Monthly</option>
+                {/* <option value="monthly">Monthly</option> */}
                 <option value="quarterly">Quarterly</option>
                 <option value="biyearly">Bi-Yearly</option>
                 <option value="yearly">Yearly</option>

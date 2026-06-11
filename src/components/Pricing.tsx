@@ -6,19 +6,19 @@ interface PricingProps {
 
 export function Pricing({ onSelectTier }: PricingProps) {
   const plans = [
-    {
-      id: "monthly",
-      name: "Monthly",
-      price: 170,
-      originalPrice: null,
-      period: "month",
-      icon: Zap,
-      description: "Pay every month",
-      savings: null,
-      color: "from-blue-200/20 to-blue-300/10",
-      borderColor: "border-blue-300/30",
-      buttonStyle: "btn-secondary hover:bg-blue-300 text-white",
-    },
+    // {
+    //   id: "monthly",
+    //   name: "Monthly",
+    //   price: 170,
+    //   originalPrice: null,
+    //   period: "month",
+    //   icon: Zap,
+    //   description: "Pay every month",
+    //   savings: null,
+    //   color: "from-blue-200/20 to-blue-300/10",
+    //   borderColor: "border-blue-300/30",
+    //   buttonStyle: "btn-secondary hover:bg-blue-300 text-white",
+    // },
     {
       id: "quarterly",
       name: "Quarterly",
@@ -48,8 +48,8 @@ export function Pricing({ onSelectTier }: PricingProps) {
     {
       id: "yearly",
       name: "Yearly",
-      price: 1200,
-      originalPrice: 1500,
+      price: 1000,
+      originalPrice: 1200,
       icon: Crown,
       description: "Pay once",
       savings: "Save $500",
@@ -107,7 +107,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
         </div>
 
         {/* Payment Plans */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           {plans.map((plan, index) => (
             <div key={plan.id} className="group relative" style={{ animationDelay: `${index * 0.1}s` }}>
               {/* Popular badge */}
