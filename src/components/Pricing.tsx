@@ -6,19 +6,6 @@ interface PricingProps {
 
 export function Pricing({ onSelectTier }: PricingProps) {
   const plans = [
-    // {
-    //   id: "monthly",
-    //   name: "Monthly",
-    //   price: 170,
-    //   originalPrice: null,
-    //   period: "month",
-    //   icon: Zap,
-    //   description: "Pay every month",
-    //   savings: null,
-    //   color: "from-blue-200/20 to-blue-300/10",
-    //   borderColor: "border-blue-300/30",
-    //   buttonStyle: "btn-secondary hover:bg-blue-300 text-white",
-    // },
     {
       id: "quarterly",
       name: "Quarterly",

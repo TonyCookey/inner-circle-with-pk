@@ -23,7 +23,7 @@ function App() {
       <MainMentor />
       <GuestSpeakers />
       <Pricing onSelectTier={setSelectedTier} />
-      {selectedTier && <Registration onClose={() => setSelectedTier(null)} />}
+      {selectedTier && <Registration selectedTier={selectedTier} onClose={() => setSelectedTier(null)} />}
       <FAQ />
       <Footer />
     </div>

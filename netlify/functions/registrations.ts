@@ -14,14 +14,14 @@ const getRedirectUrl = (paymentMethod: string, tier: string) => {
     stripe: {
       monthly: "https://buy.stripe.com/8x29AS7eQ74GaeW5YD7Re0C",
       quarterly: "https://buy.stripe.com/8x2bJ06aM1KmgDk4Uz7Re0E",
-      "bi-annual": "https://buy.stripe.com/dRm14m42EagS2Mu4Uz7Re0D",
-      annual: "https://buy.stripe.com/3cI4gybv6fBc72KbiX7Re0F",
+      biyearly: "https://buy.stripe.com/dRm14m42EagS2Mu4Uz7Re0D",
+      yearly: "https://buy.stripe.com/3cI4gybv6fBc72KbiX7Re0F",
     },
     paystack: {
       monthly: "https://paystack.shop/pay/ak8zkqxmc9",
       quarterly: "https://paystack.shop/pay/pcb3nxut8s",
-      "bi-annual": "https://paystack.shop/pay/8hbiskh2-k",
-      annual: "https://paystack.shop/pay/wwo-sj1eo9",
+      biyearly: "https://paystack.shop/pay/8hbiskh2-k",
+      yearly: "https://paystack.shop/pay/wwo-sj1eo9",
     },
   };
 
@@ -54,6 +54,11 @@ export const handler: Handler = async (event) => {
     return { statusCode: 400, body: JSON.stringify({ error: "Missing required fields" }) };
   }
 
+  const redirect = getRedirectUrl(paymentMethod, tier);
+  if (!redirect) {
+    return { statusCode: 400, body: JSON.stringify({ error: "Invalid payment option" }) };
+  }
+
   const client = getClient();
 
   try {
@@ -67,7 +72,6 @@ export const handler: Handler = async (event) => {
     const values = [firstName, lastName, email, phone, occupation, tier];
     const res = await client.query(insertText, values);
 
-    const redirect = getRedirectUrl(paymentMethod, tier);
     return {
       statusCode: 201,
       body: JSON.stringify({ success: true, id: res.rows[0]?.id, redirect }),

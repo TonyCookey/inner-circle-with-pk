@@ -36,7 +36,7 @@ export function FAQ() {
     {
       question: "What if I can't afford the program?",
       answer:
-        "We understand that financial situations vary. If you're genuinely interested in the program but facing financial constraints, please reach out to our team. Flexible subscription options are available: yearly, half-year, quarterly and monthly plans.",
+        "We understand that financial situations vary. If you're genuinely interested in the program but facing financial constraints, please reach out to our team. Flexible subscription options are available: yearly, half-year, and quarterly plans.",
     },
     {
       question: "What happens if I miss a live session?",

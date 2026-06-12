@@ -1,18 +1,23 @@
 import React, { useState } from "react";
-import { X, CreditCard, DollarSign } from "lucide-react";
+import { X } from "lucide-react";
 
 interface RegistrationProps {
+  selectedTier: string;
   onClose: () => void;
 }
 
-export function Registration({ onClose }: RegistrationProps) {
+const getInitialTier = (selectedTier: string) => {
+  return ["quarterly", "biyearly", "yearly"].includes(selectedTier) ? selectedTier : "quarterly";
+};
+
+export function Registration({ selectedTier, onClose }: RegistrationProps) {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
     occupation: "",
-    tier: "quarterly",
+    tier: getInitialTier(selectedTier),
     paymentMethod: "paystack",
     "bot-field": "",
   });
@@ -152,7 +157,6 @@ export function Registration({ onClose }: RegistrationProps) {
                 onChange={handleChange}
                 className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-yellow-500 focus:outline-none"
               >
-                {/* <option value="monthly">Monthly</option> */}
                 <option value="quarterly">Quarterly</option>
                 <option value="biyearly">Bi-Yearly</option>
                 <option value="yearly">Yearly</option>
