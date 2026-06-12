@@ -7,7 +7,6 @@ export function Header({ onSelectTier }: PricingProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navItems = [
-    { label: "Conference", href: "#conference" },
     { label: "About", href: "#about" },
     { label: "Meet PK", href: "#meet-pk" },
     { label: "Mentors", href: "#mentors" },
