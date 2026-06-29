@@ -8,43 +8,43 @@ export function Pricing({ onSelectTier }: PricingProps) {
   const plans = [
     {
       id: "quarterly",
-      name: "Quarterly",
+      name: "3 Months",
       price: 450,
       originalPrice: null,
       period: "3 months",
       icon: Zap,
-      description: "Pay in four installments",
-      savings: "Save $200",
+      description: "Pay in two installments",
       color: "from-blue-500/20 to-blue-600/10",
       borderColor: "border-blue-500/30",
       buttonStyle: "btn-secondary hover:bg-blue-600 text-white",
     },
     {
       id: "biyearly",
-      name: "Bi-Yearly",
+      name: "6 Months",
       price: 800,
       originalPrice: null,
-      period: "6 months",
+      // period: "6 months",
       icon: Star,
-      description: "Pay in two installments",
-      savings: "Save $400",
+      description: "Pay once",
+      savings: "Save $100",
       color: "from-purple-500/20 to-purple-600/10",
       borderColor: "border-purple-500/30",
       buttonStyle: "btn-secondary hover:bg-purple-600 text-white",
-    },
-    {
-      id: "yearly",
-      name: "Yearly",
-      price: 1000,
-      originalPrice: 1200,
-      icon: Crown,
-      description: "Pay once",
-      savings: "Save $500",
-      color: "from-yellow-500/30 to-yellow-600/20",
-      borderColor: "border-yellow-500/30",
-      buttonStyle: "btn-ultra hover:bg-yellow-600 text-gray-900",
       popular: true,
     },
+    // {
+    //   id: "yearly",
+    //   name: "Yearly",
+    //   price: 1000,
+    //   originalPrice: 1200,
+    //   icon: Crown,
+    //   description: "Pay once",
+    //   savings: "Save $500",
+    //   color: "from-yellow-500/30 to-yellow-600/20",
+    //   borderColor: "border-yellow-500/30",
+    //   buttonStyle: "btn-ultra hover:bg-yellow-600 text-gray-900",
+    //   popular: true,
+    // },
   ];
 
   const features = [
@@ -94,7 +94,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
         </div>
 
         {/* Payment Plans */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           {plans.map((plan, index) => (
             <div key={plan.id} className="group relative" style={{ animationDelay: `${index * 0.1}s` }}>
               {/* Popular badge */}

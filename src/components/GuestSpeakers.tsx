@@ -34,6 +34,14 @@ export function GuestSpeakers() {
         "Popularly known as the Common Sense Guru, Dr. Olumide is one of Africa’s most influential thought leaders on wealth creation and personal transformation.",
     },
     {
+      name: "Gbite Falade",
+      title: "CEO/MD Aradel Holdings",
+      expertise: "Finance & Business",
+      image: "/gbite-falade.jpeg",
+      description:
+        "Business-focused leader and results-driven Energy professional (Oil, Gas & Power) with significant experience across industry value chains.",
+    },
+    {
       name: "Fela Durotoye",
       title: "Leadership Expert",
       expertise: "Leadership & Business",
